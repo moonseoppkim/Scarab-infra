@@ -31,7 +31,7 @@
 
 #include "globals/global_defs.h"
 #include "libs/list_lib.h"
-
+#include "libs/hash_lib.h"
 
 /**************************************************************************************/
 
@@ -153,6 +153,13 @@ typedef struct Cache_struct {
 
   /* Conflict Miss*/
   Flag is_conflict_miss;
+
+  /* Capacity Miss*/
+  Flag is_capacity_miss;
+
+  /* Compulsory Miss */
+  Flag is_compulsory_miss;
+  Hash_Table accessed_blocks;
 } Cache;
 
 /**************************************************************************************/

@@ -208,6 +208,12 @@ void init_cache(Cache* cache, const char* name, uns cache_size, uns assoc,
   }
 
   cache->tag_incl_offset = FALSE;
+
+  cache->is_conflict_miss = FALSE;
+  cache->is_capacity_miss = FALSE;
+  cache->is_compulsory_miss = FALSE;
+
+  init_hash_table(&cache->accessed_blocks, "Accessed Blocks", NODE_TABLE_SIZE, sizeof(Flag));
 }
 
 /**************************************************************************************/
@@ -264,14 +270,27 @@ void* cache_access(Cache* cache, Addr addr, Addr* line_addr, Flag update_repl) {
           set, hexstr64s(addr));
     return access_shadow_lines(cache, set, tag);
   }
-
+  
+  cache->is_compulsory_miss = FALSE; 
   cache->is_conflict_miss = TRUE;
+  cache->is_compulsory_miss = FALSE;
+
   if(strcmp(cache->name, "DCACHE") == 0) {
-    for(int ii = 0; ii < cache->assoc; ii++) {
-      Cache_Entry* line = &cache->entries[set][ii];
-      if(!line->valid) {
+    Flag new_entry = FALSE;
+    void* value = hash_table_access_create(&cache->accessed_blocks, *line_addr, &new_entry);
+
+    if (new_entry) {
+        cache->is_compulsory_miss = TRUE;
         cache->is_conflict_miss = FALSE;
-        break;
+        Flag *dummy = (Flag *) value;
+        *dummy = TRUE;
+    } else {
+      for(int ii = 0; ii < cache->assoc; ii++) {
+        Cache_Entry* line = &cache->entries[set][ii];
+        if(!line->valid) {
+          cache->is_conflict_miss = FALSE;
+          break;
+        }
       }
     }
   }

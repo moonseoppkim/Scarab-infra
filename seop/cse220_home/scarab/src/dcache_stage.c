@@ -376,9 +376,6 @@ void update_dcache_stage(Stage_Data* src_sd) {
         dc_miss_stat(op);
 
       if(op->table_info->mem_type == MEM_LD) {  // load request
-        if (&dc->dcache.is_conflict_miss)
-          STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_LOAD);
-
         if(((model->mem == MODEL_MEM) &&
             scan_stores(
               op->oracle_info.va,
@@ -442,12 +439,25 @@ void update_dcache_stage(Stage_Data* src_sd) {
           op->state              = OS_MISS;
           op->engine_info.dcmiss = TRUE;
         } else {
+          dc->dcache.is_capacity_miss = TRUE;
+          dc->dcache.is_compulsory_miss = FALSE;
+          dc->dcache.is_conflict_miss = FALSE; 
+
           op->state = OS_WAIT_MEM;  // go into this state if no miss buffer is
                                     // available
           cmp_model.node_stage[dc->proc_id].mem_blocked = TRUE;
           mem->uncores[dc->proc_id].mem_block_start     = freq_cycle_count(
             FREQ_DOMAIN_L1);
           STAT_EVENT(op->proc_id, DCACHE_MISS_WAITMEM);
+        }
+
+        // stat
+        if (dc->dcache.is_compulsory_miss) {
+          STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_LOAD);
+        } else if (dc->dcache.is_conflict_miss) {
+          STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_LOAD);
+        } else if (dc->dcache.is_capacity_miss) {
+          STAT_EVENT(op->proc_id, DCACHE_MISS_CAPACITY_LOAD);
         }
       } else if(op->table_info->mem_type == MEM_PF ||
                 op->table_info->mem_type == MEM_WH) {
@@ -511,9 +521,6 @@ void update_dcache_stage(Stage_Data* src_sd) {
       } else {  // store request
         ASSERT(dc->proc_id, op->table_info->mem_type == MEM_ST);
 
-        if (&dc->dcache.is_conflict_miss)
-          STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_STORE);
-
         if(((model->mem == MODEL_MEM) &&
             new_mem_req(MRT_DSTORE, dc->proc_id, line_addr, DCACHE_LINE_SIZE,
                         DCACHE_CYCLES - 1 + op->inst_info->extra_ld_latency, op,
@@ -562,11 +569,24 @@ void update_dcache_stage(Stage_Data* src_sd) {
             op->state = OS_SCHEDULED;
           }
         } else {
+          dc->dcache.is_capacity_miss = TRUE;
+          dc->dcache.is_compulsory_miss = FALSE;
+          dc->dcache.is_conflict_miss = FALSE;
+
           op->state                                     = OS_WAIT_MEM;
           cmp_model.node_stage[dc->proc_id].mem_blocked = TRUE;
           mem->uncores[dc->proc_id].mem_block_start     = freq_cycle_count(
             FREQ_DOMAIN_L1);
           STAT_EVENT(op->proc_id, DCACHE_MISS_WAITMEM);
+        }
+
+        // stat
+        if (dc->dcache.is_compulsory_miss) {
+          STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_STORE);
+        } else if (dc->dcache.is_conflict_miss) {
+          STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_STORE);
+        } else if (dc->dcache.is_capacity_miss) {
+          STAT_EVENT(op->proc_id, DCACHE_MISS_CAPACITY_STORE);
         }
       }
     }
