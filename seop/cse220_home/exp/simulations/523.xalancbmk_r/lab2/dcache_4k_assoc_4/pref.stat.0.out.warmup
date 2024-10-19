@@ -1,0 +1,509 @@
+/* -*- Mode: c -*- */
+####################################################################################################
+Core 0
+####################################################################################################
+Cumulative:        Cycles: 15218065              Instructions: 10000003              IPC: 0.65711
+
+Periodic:          Cycles: 15218065              Instructions: 10000003              IPC: 0.65711
+
+PREF_DL0REQ_QUEUE_HIT_BY_DEMAND                      0                              0              
+
+PREF_UMLC_REQ_QUEUE_HIT_BY_DEMAND                    0                              0              
+
+PREF_UL1REQ_QUEUE_HIT_BY_DEMAND                      0                              0              
+
+PREF_DL0REQ_QUEUE_FULL                               0                              0              
+
+PREF_UMLC_REQ_QUEUE_FULL                             0                              0              
+
+PREF_UL1REQ_QUEUE_FULL                               0                              0              
+
+PREF_DC_HIT_NOSEND                                   0                              0              
+
+PREF_WBQDC_HIT_NOSEND                                0                              0              
+
+PREF_MLCQ_STALL                                      0                              0              
+
+PREF_L1Q_STALL                                       0                              0              
+
+PREF_UMLC_REQ_SEND_QUEUE_STALL                       0                              0              
+
+PREF_UL1REQ_SEND_QUEUE_STALL                    259809                         259809              
+
+PREF_UMLC_REQ_QUEUE_SENTREQ                          0                              0              
+
+PREF_UL1REQ_QUEUE_SENTREQ                       248328                         248328              
+
+PREF_NEWREQ_MATCHED                               2434                           2434              
+
+PREF_UMLC_REQ_QUEUE_MATCHED_REQ                      0                              0              
+
+PREF_UL1REQ_QUEUE_MATCHED_REQ                      997                            997              
+
+PREF_DL0REQ_QUEUE_MATCHED_REQ                        0                              0              
+
+L1_PREF_HIT                                      87448                          87448              
+
+L1_PREF_UNIQUE_HIT                               81826                          81826              
+
+L1_PREF_LATE                                      9872                           9872              
+
+L1_LATE_PREF_CYCLES                            1295717                        1295717              
+
+L1_LATE_PREF_CYCLES_DIST_0                        6110       61.892%             6110       61.892%
+L1_LATE_PREF_CYCLES_DIST_100                      2661       26.955%             2661       26.955%
+L1_LATE_PREF_CYCLES_DIST_200                       528        5.348%              528        5.348%
+L1_LATE_PREF_CYCLES_DIST_300                       200        2.026%              200        2.026%
+L1_LATE_PREF_CYCLES_DIST_400                        93        0.942%               93        0.942%
+L1_LATE_PREF_CYCLES_DIST_500                        30        0.304%               30        0.304%
+L1_LATE_PREF_CYCLES_DIST_600                        27        0.274%               27        0.274%
+L1_LATE_PREF_CYCLES_DIST_700                         7        0.071%                7        0.071%
+L1_LATE_PREF_CYCLES_DIST_800                        15        0.152%               15        0.152%
+L1_LATE_PREF_CYCLES_DIST_900                         4        0.041%                4        0.041%
+L1_LATE_PREF_CYCLES_DIST_1000                        7        0.071%                7        0.071%
+L1_LATE_PREF_CYCLES_DIST_1100                       25        0.253%               25        0.253%
+L1_LATE_PREF_CYCLES_DIST_1200                       69        0.699%               69        0.699%
+L1_LATE_PREF_CYCLES_DIST_1300                       34        0.344%               34        0.344%
+L1_LATE_PREF_CYCLES_DIST_1400                       23        0.233%               23        0.233%
+L1_LATE_PREF_CYCLES_DIST_1500                       19        0.192%               19        0.192%
+L1_LATE_PREF_CYCLES_DIST_1600                       14        0.142%               14        0.142%
+L1_LATE_PREF_CYCLES_DIST_1700                        3        0.030%                3        0.030%
+L1_LATE_PREF_CYCLES_DIST_1800                        3        0.030%                3        0.030%
+L1_LATE_PREF_CYCLES_DIST_1900                        0        0.000%                0        0.000%
+L1_LATE_PREF_CYCLES_DIST_2000                        0        0.000%                0        0.000%
+                                                  9872      100.000%             9872      100.000%
+                                                  0.79         1.89              0.79         1.89
+
+MLC_PREF_HIT                                      3818                           3818              
+
+MLC_PREF_UNIQUE_HIT                                748                            748              
+
+MLC_PREF_LATE                                        0                              0              
+
+PREF_HYBRID_SEL_0                                    0         -nan%                0         -nan%
+PREF_HYBRID_SEL_1                                    0         -nan%                0         -nan%
+PREF_HYBRID_SEL_2                                    0         -nan%                0         -nan%
+PREF_HYBRID_SEL_3                                    0         -nan%                0         -nan%
+PREF_HYBRID_SEL_4                                    0         -nan%                0         -nan%
+PREF_HYBRID_SEL_5                                    0         -nan%                0         -nan%
+PREF_HYBRID_SEL_6                                    0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+PREF_DISTANCE_1                                     18       40.000%               18       40.000%
+PREF_DISTANCE_2                                      1        2.222%                1        2.222%
+PREF_DISTANCE_3                                      3        6.667%                3        6.667%
+PREF_DISTANCE_4                                     11       24.444%               11       24.444%
+PREF_DISTANCE_5                                     12       26.667%               12       26.667%
+PREF_DISTANCE_6                                      0        0.000%                0        0.000%
+PREF_DISTANCE_7                                      0        0.000%                0        0.000%
+PREF_DISTANCE_8                                      0        0.000%                0        0.000%
+PREF_DISTANCE_9                                      0        0.000%                0        0.000%
+PREF_DISTANCE_10                                     0        0.000%                0        0.000%
+                                                    45      100.000%               45      100.000%
+                                                  1.96         1.20              1.96         1.20
+
+PREF_REPL_MRU                                        0         -nan%                0         -nan%
+PREF_REPL_MID                                        0         -nan%                0         -nan%
+PREF_REPL_LOWQTR                                     0         -nan%                0         -nan%
+PREF_REPL_LRU                                        0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+PREF_REPL_MOVEDOWN                                   0         -nan%                0         -nan%
+PREF_REPL_MOVEUP                                     0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+PREF_COV_1                                           0         -nan%                0         -nan%
+PREF_COV_2                                           0         -nan%                0         -nan%
+PREF_COV_3                                           0         -nan%                0         -nan%
+PREF_COV_4                                           0         -nan%                0         -nan%
+PREF_COV_5                                           0         -nan%                0         -nan%
+PREF_COV_6                                           0         -nan%                0         -nan%
+PREF_COV_7                                           0         -nan%                0         -nan%
+PREF_COV_8                                           0         -nan%                0         -nan%
+PREF_COV_9                                           0         -nan%                0         -nan%
+PREF_COV_10                                          0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+PREF_POL_1                                           0        0.000%                0        0.000%
+PREF_POL_2                                           0        0.000%                0        0.000%
+PREF_POL_3                                           0        0.000%                0        0.000%
+PREF_POL_4                                           0        0.000%                0        0.000%
+PREF_POL_5                                           0        0.000%                0        0.000%
+PREF_POL_6                                           0        0.000%                0        0.000%
+PREF_POL_7                                           0        0.000%                0        0.000%
+PREF_POL_8                                           0        0.000%                0        0.000%
+PREF_POL_9                                           0        0.000%                0        0.000%
+PREF_POL_10                                         45      100.000%               45      100.000%
+                                                    45      100.000%               45      100.000%
+                                                  9.00         9.10              9.00         9.10
+
+PREF_ACC_1                                           0        0.000%                0        0.000%
+PREF_ACC_2                                           0        0.000%                0        0.000%
+PREF_ACC_3                                           0        0.000%                0        0.000%
+PREF_ACC_4                                           0        0.000%                0        0.000%
+PREF_ACC_5                                           2        4.444%                2        4.444%
+PREF_ACC_6                                          13       28.889%               13       28.889%
+PREF_ACC_7                                           9       20.000%                9       20.000%
+PREF_ACC_8                                           6       13.333%                6       13.333%
+PREF_ACC_9                                          15       33.333%               15       33.333%
+PREF_ACC_10                                          0        0.000%                0        0.000%
+                                                    45      100.000%               45      100.000%
+                                                  6.42         1.34              6.42         1.34
+
+PREF_TIMELY_1                                        0        0.000%                0        0.000%
+PREF_TIMELY_2                                        0        0.000%                0        0.000%
+PREF_TIMELY_3                                        0        0.000%                0        0.000%
+PREF_TIMELY_4                                        0        0.000%                0        0.000%
+PREF_TIMELY_5                                        0        0.000%                0        0.000%
+PREF_TIMELY_6                                        0        0.000%                0        0.000%
+PREF_TIMELY_7                                       13       28.889%               13       28.889%
+PREF_TIMELY_8                                        3        6.667%                3        6.667%
+PREF_TIMELY_9                                       13       28.889%               13       28.889%
+PREF_TIMELY_10                                      16       35.556%               16       35.556%
+                                                    45      100.000%               45      100.000%
+                                                  7.71         4.81              7.71         4.81
+
+PREF_UNUSED_EVICT                               147153                         147153              
+
+PREF_REGION_SENT                                     0                              0              
+
+PREF_REGION_USEFUL                                   0                              0              
+
+PREF_REGION_EVICT                                    0                              0              
+
+PREF_PFPOL                                           0                              0              
+
+PREF_PHASE_NEWPHASE_DET                              0                              0              
+
+PREF_PHASE_NEWPHASE_NOTVALID                         0                              0              
+
+PREF_PHASE_SENTPREF                                  0                              0              
+
+PREF_PHASE_OVERWRITE_PAGE                            0                              0              
+
+PREF_UPDATE_COUNT                                   45                             45              
+
+PREF_ACC1_HT_HP                                      0        0.000%                0        0.000%
+PREF_ACC1_HT_LP                                      0        0.000%                0        0.000%
+PREF_ACC1_LT_HP                                      0        0.000%                0        0.000%
+PREF_ACC1_LT_LP                                      0        0.000%                0        0.000%
+PREF_ACC2_HT_HP                                      0        0.000%                0        0.000%
+PREF_ACC2_HT_LP                                      0        0.000%                0        0.000%
+PREF_ACC2_LT_HP                                      0        0.000%                0        0.000%
+PREF_ACC2_LT_LP                                     15       33.333%               15       33.333%
+PREF_ACC3_HT_HP                                      0        0.000%                0        0.000%
+PREF_ACC3_HT_LP                                      0        0.000%                0        0.000%
+PREF_ACC3_LT_HP                                      0        0.000%                0        0.000%
+PREF_ACC3_LT_LP                                      0        0.000%                0        0.000%
+PREF_ACC4_HT_HP                                      0        0.000%                0        0.000%
+PREF_ACC4_HT_LP                                      0        0.000%                0        0.000%
+PREF_ACC4_LT_HP                                      0        0.000%                0        0.000%
+PREF_ACC4_LT_LP                                     30       66.667%               30       66.667%
+                                                    45      100.000%               45      100.000%
+                                                 12.33        10.87             12.33        10.87
+
+FDIP_DECIDE_PREF_ONPATH                         633944                         633944              
+
+FDIP_DECIDE_PREF_OFFPATH                        364206                         364206              
+
+FDIP_NEW_PREFETCHES_ONPATH                        4436                           4436              
+
+FDIP_NEW_PREFETCHES_OFFPATH                      11613                          11613              
+
+FDIP_PREF_ICACHE_PROBE_HIT_ONPATH               627647                         627647              
+
+FDIP_PREF_ICACHE_PROBE_HIT_OFFPATH              345982                         345982              
+
+FDIP_PREF_MSHR_PROBE_HIT_ONPATH                   1763                           1763              
+
+FDIP_PREF_MSHR_PROBE_HIT_OFFPATH                  6519                           6519              
+
+FDIP_PREF_FAILED_ONPATH                             98                             98              
+
+FDIP_PREF_FAILED_OFFPATH                            92                             92              
+
+FDIP_ATTEMPTED_PREF_ONPATH                      634476                         634476              
+
+FDIP_ATTEMPTED_PREF_OFFPATH                     409808                         409808              
+
+FDIP_ALT_PATH_PREFETCHES_IC_EMITTED                  0                              0              
+
+FDIP_ALT_PATH_PREFETCHES_IC_TRIGGERED                0                              0              
+
+FDIP_ALT_PATH_PREFETCHES_UOC_EMITTED_OFF_PATH             0         -nan%                0         -nan%
+FDIP_ALT_PATH_PREFETCHES_UOC_EMITTED_ON_PATH             0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_ALT_PATH_PREFETCHES_UOC_TRIGGERED               0                              0              
+
+FDIP_BREAK_REACH_FTQ_END                      15021101       98.706%         15021101       98.706%
+FDIP_BREAK_FTQ_EMPTY                                 0        0.000%                0        0.000%
+FDIP_BREAK_MAX_FTQ_ENTRY_CYC                    150830        0.991%           150830        0.991%
+FDIP_BREAK_FULL_MEM_REQ_BUF                      46134        0.303%            46134        0.303%
+                                              15218065      100.000%         15218065      100.000%
+                                                  0.03         0.26              0.03         0.26
+
+FDIP_CYCLE_COUNT                                     0                              0              
+
+ICACHE_USEFUL_FETCHES                              661                            661              
+
+USEFUL_CACHELINES_RETIRED                            0                              0              
+
+ICACHE_UNUSEFUL_FETCHES                              0                              0              
+
+UNIQUE_MISSED_LINES                                661                            661              
+
+UNIQUE_HIT_LINES                                     0                              0              
+
+UNIQUE_PREFETCHED_LINES                              0                              0              
+
+FDIP_BTB_MISS_NT_RESTEER_ONPATH                   1172                           1172              
+
+FDIP_BTB_MISS_NT_RESTEER_OFFPATH                  1081                           1081              
+
+FDIP_UTILITY_HASH_HIT                                0         -nan%                0         -nan%
+FDIP_UTILITY_HASH_MISS                               0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_UC_HIT                                          0         -nan%                0         -nan%
+FDIP_UC_MISS                                         0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_UC_USEFUL_LINES                                 0                              0              
+
+FDIP_UC_REPLACEMENT                                  0                              0              
+
+FDIP_BLOOM_HIT                                       0         -nan%                0         -nan%
+FDIP_BLOOM_MISS                                      0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_BLOOM_INSERTED                                  0                              0              
+
+FDIP_BLOOM_CLEAR1                                    0                              0              
+
+FDIP_BLOOM_CLEAR2                                    0                              0              
+
+FDIP_BLOOM_CLEAR4                                    0                              0              
+
+FDIP_BLOOM_1STREAM                                   0                              0              
+
+FDIP_BLOOM_2STREAM                                   0                              0              
+
+FDIP_BLOOM_3STREAM                                   0                              0              
+
+FDIP_BLOOM_4STREAM                                   0                              0              
+
+FDIP_BLOOM_5STREAM                                   0                              0              
+
+FDIP_BLOOM_6STREAM                                   0                              0              
+
+FDIP_BLOOM_7STREAM                                   0                              0              
+
+FDIP_BLOOM_8STREAM                                   0                              0              
+
+FDIP_BLOOM_1INSERT                                   0                              0              
+
+FDIP_BLOOM_2INSERT                                   0                              0              
+
+FDIP_BLOOM_4INSERT                                   0                              0              
+
+FDIP_BLOOM_NOSTREAM                                  0                              0              
+
+FDIP_AVG_FTQ_OCCUPANCY_OPS                           0                              0              
+
+FDIP_AVG_FTQ_OCCUPANCY                               0                              0              
+
+FDIP_FTQ_OCCUPANCY_OPS_ACCUMULATED          3304162749                     3304162749              
+
+FDIP_FTQ_OCCUPANCY_BLOCKS_ACCUMULATED        479642138                      479642138              
+
+FDIP_TRAINING_SAMPLE                                 0                              0              
+
+FDIP_SENIORITY_FTQ_ACCUMULATED                       0                              0              
+
+FDIP_SENIORITY_FTQ_HIT                               0                              0              
+
+FDIP_SENIORITY_FTQ_MISS                              0                              0              
+
+FDIP_UFTQ_STAY_SAME_FTQ_NUM                          0         -nan%                0         -nan%
+FDIP_UFTQ_DEC_FTQ_NUM                                0         -nan%                0         -nan%
+FDIP_UFTQ_INC_FTQ_NUM                                0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_OFF_CONF_ON_PREF_CANDIDATES                     0         -nan%                0         -nan%
+FDIP_OFF_CONF_OFF_PREF_CANDIDATES                    0         -nan%                0         -nan%
+FDIP_ON_CONF_ON_PREF_CANDIDATES                      0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_PREF_CANDIDATES                     0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_ON_CONF_ON_EMITTED                              0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_EMITTED                             0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_EMITTED                             0         -nan%                0         -nan%
+FDIP_OFF_CONF_OFF_EMITTED                            0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_OFF_CONF_ON_NUM_EVENTS                          0                              0              
+
+FDIP_OFF_CONF_ON_BTB_MISS                            0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BP_INCORRECT                        0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_MISFETCH                            0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_NO_TARGET                           0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_OFF_CONF_ON_BTB_MISS_PREF_CANDIDATES             0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BP_INCORRECT_PREF_CANDIDATES             0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_MISFETCH_PREF_CANDIDATES             0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_NO_TARGET_PREF_CANDIDATES             0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_OFF_CONF_ON_BTB_MISS_EMITTED                    0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BP_INCORRECT_EMITTED                0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_MISFETCH_EMITTED                    0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_NO_TARGET_EMITTED                   0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_OFF_CONF_ON_BP_INCORRECT_0_CONF                 0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BP_INCORRECT_1_CONF                 0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BP_INCORRECT_2_CONF                 0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BP_INCORRECT_3_CONF                 0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_OFF_CONF_ON_BTB_MISS_CBR_0_CONF                 0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CBR_1_CONF                 0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CBR_2_CONF                 0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CBR_3_CONF                 0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_OFF_CONF_ON_BTB_MISS_NOT_CF                     0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CF_BR                      0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CF_CBR                     0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CF_CALL                    0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CF_IBR                     0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CF_ICALL                   0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CF_ICO                     0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CF_RET                     0         -nan%                0         -nan%
+FDIP_OFF_CONF_ON_BTB_MISS_CF_SYS                     0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_ON_CONF_OFF_NUM_EVENTS                          0                              0              
+
+FDIP_ON_CONF_OFF_NUM_BTB_MISS                        0                              0              
+
+FDIP_ON_CONF_OFF_NUM_OP_DIST_INC                     0                              0              
+
+FDIP_ON_CONF_OFF_NUM_CF_BR                           0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CF_CBR                          0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CF_CALL                         0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CF_IBR                          0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CF_ICALL                        0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CF_ICO                          0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CF_RET                          0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CF_SYS                          0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_ON_CONF_OFF_NUM_CONF_0_BR                       0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CONF_1_BR                       0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CONF_2_BR                       0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_NUM_CONF_3_BR                       0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_BTB_NUM_CYCLES_OFF_PATH_EVENT                   0                              0              
+
+FDIP_BP_CONF_0_MISPRED                             704        0.019%              704        0.019%
+FDIP_BP_CONF_1_MISPRED                            1759        0.047%             1759        0.047%
+FDIP_BP_CONF_2_MISPRED                            1122        0.030%             1122        0.030%
+FDIP_BP_CONF_3_MISPRED                            5395        0.143%             5395        0.143%
+FDIP_BP_CONF_0_CORRECT                           11248        0.299%            11248        0.299%
+FDIP_BP_CONF_1_CORRECT                           19066        0.507%            19066        0.507%
+FDIP_BP_CONF_2_CORRECT                           12581        0.335%            12581        0.335%
+FDIP_BP_CONF_3_CORRECT                         3708749       98.621%          3708749       98.621%
+                                               3760624      100.000%          3760624      100.000%
+                                                  6.97         6.92              6.97         6.92
+
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_0             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_1             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_2             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_3             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_RATE                       0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_INV_CONF_INC                        0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_0_PREF_CANDIDATES             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_1_PREF_CANDIDATES             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_2_PREF_CANDIDATES             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_3_PREF_CANDIDATES             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_RATE_PREF_CANDIDATES             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_INV_CONF_INC_PREF_CANDIDATES             0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_0_EMITTED             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_1_EMITTED             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_2_EMITTED             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_BP_TAKEN_CONF_3_EMITTED             0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_BTB_MISS_RATE_EMITTED               0         -nan%                0         -nan%
+FDIP_ON_CONF_OFF_INV_CONF_INC_EMITTED                0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+ICACHE_FIRST_MISS_AFTER_WARMUP_SEEN_DURING_WARMUP             0         -nan%                0         -nan%
+ICACHE_FIRST_MISS_AFTER_WARMUP_NOT_SEEN_DURING_WARMUP             0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+ICACHE_FIRST_MISS_AFTER_WARMUP_NO_PREF_DURING_WARMUP             0         -nan%                0         -nan%
+ICACHE_FIRST_MISS_AFTER_WARMUP_TRAINED_UNUSEFUL_DURING_WARMUP             0         -nan%                0         -nan%
+ICACHE_FIRST_MISS_AFTER_WARMUP_TRAINED_USEFUL_DURING_WARMUP             0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+FDIP_PREFETCH_EVICT_NO_HIT_ONLY_ONCE                 0                              0              
+
+FDIP_PREFETCH_HIT_ICACHE                        973629       93.234%           973629       93.234%
+FDIP_PREFETCH_HIT_MLC                            11491        1.100%            11491        1.100%
+FDIP_PREFETCH_HIT_L1                               361        0.035%              361        0.035%
+FDIP_PREFETCH_HIT_DRAM                           58803        5.631%            58803        5.631%
+                                               1044284      100.000%          1044284      100.000%
+                                                  0.18         0.68              0.18         0.68
+
+FDIP_MEM_BUF_MISS                                    0         -nan%                0         -nan%
+FDIP_MEM_BUF_FOUND                                   0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+DJOLT_PREFETCH_ENTRY                                 0                              0              
+
+DJOLT_PREFETCH_INITIAL                               0                              0              
+
+DJOLT_PREFETCH_SIG                                   0                              0              
+
+FNLMMA_PREFETCH_TYPE0                                0         -nan%                0         -nan%
+FNLMMA_PREFETCH_TYPE1                                0         -nan%                0         -nan%
+FNLMMA_PREFETCH_TYPE2                                0         -nan%                0         -nan%
+FNLMMA_PREFETCH_TYPE3                                0         -nan%                0         -nan%
+FNLMMA_PREFETCH_TYPE4                                0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+
+

@@ -150,6 +150,9 @@ typedef struct Cache_struct {
 
   /* For repl with predictor */
   void* predictor;
+
+  /* Conflict Miss*/
+  Flag is_conflict_miss;
 } Cache;
 
 /**************************************************************************************/

@@ -265,6 +265,16 @@ void* cache_access(Cache* cache, Addr addr, Addr* line_addr, Flag update_repl) {
     return access_shadow_lines(cache, set, tag);
   }
 
+  cache->is_conflict_miss = TRUE;
+  if(strcmp(cache->name, "DCACHE") == 0) {
+    for(int ii = 0; ii < cache->assoc; ii++) {
+      Cache_Entry* line = &cache->entries[set][ii];
+      if(!line->valid) {
+        cache->is_conflict_miss = FALSE;
+        break;
+      }
+    }
+  }
 
   DEBUG(0, "Didn't find line in set %u in cache '%s' base 0x%s\n", set,
         cache->name, hexstr64s(addr));
