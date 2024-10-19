@@ -1,0 +1,190 @@
+/* -*- Mode: c -*- */
+####################################################################################################
+Core 0
+####################################################################################################
+Cumulative:        Cycles: 12389254              Instructions: 20000001              IPC: 1.61430
+
+Periodic:          Cycles: 6255713               Instructions: 9999998               IPC: 1.59854
+
+DCACHE_PREF_HIT                                      0                              0              
+
+IFETCH_WB_FIRST_SCHEDULE                             0         -nan%                0         -nan%
+PREFETCH_LAST_SCHEDULE                               0         -nan%                0         -nan%
+DEMAND_PASS_PREF_SCHEDULE                            0         -nan%                0         -nan%
+DEMAND_PASS_LOW_OP_SCHEDULE                          0         -nan%                0         -nan%
+DEMAND_LAST_SCHEDULE                                 0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+SEND_MISS_REQ_QUEUE                              32487                          91094              
+
+L1_DATA_EVICT                                    32357                          58958              
+
+STREAM_BUFFER_REQ                                    0                              0              
+
+PREF_SEND_TO_MEM_REQ                                 0         -nan%                0         -nan%
+PREF_SEND_TO_MEM_REQ_FAIL                            0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+HIT_TRAIN_STREAM                                 66490       97.686%           132783       96.836%
+MISS_TRAIN_STREAM                                 1575        2.314%             4339        3.164%
+                                                 68065      100.000%           137122      100.000%
+                                                  0.02         0.15              0.03         0.17
+
+STREAM_TRAIN_CREATE                                811                           2248              
+
+MEM_REQ_MISS_HWP_PREF_Q                              0         -nan%                0         -nan%
+MEM_REQ_MISS_SW_PREF_Q                               0         -nan%                0         -nan%
+MEM_REQ_MISS_IFETCH_Q                                0         -nan%                0         -nan%
+MEM_REQ_MISS_DFETCH_Q                                0         -nan%                0         -nan%
+MEM_REQ_MISS_DSTORE_Q                                0         -nan%                0         -nan%
+MEM_REQ_MISS_DPRF_Q                                  0         -nan%                0         -nan%
+MEM_REQ_MISS_WB_Q                                    0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+PREF_HIT_BY_DEMAND_IFETCH                            0         -nan%                0         -nan%
+PREF_HIT_BY_DEMAND_DFETCH                            0         -nan%                0         -nan%
+PREF_HIT_BY_DEMAND_DSTORE                            0         -nan%                0         -nan%
+PREF_HIT_BY_DEMAND_IPREF                             0         -nan%                0         -nan%
+PREF_HIT_BY_DEMAND_DPRF                              0         -nan%                0         -nan%
+PREF_HIT_BY_DEMAND_WB                                0         -nan%                0         -nan%
+PREF_HIT_BY_PREF                                     0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+PREF_HIT_DEMAND_IFETCH                               0         -nan%                0         -nan%
+PREF_HIT_DEMAND_DFETCH                               0         -nan%                0         -nan%
+PREF_HIT_DEMAND_DSTORE                               0         -nan%                0         -nan%
+PREF_HIT_DEMAND_IPREF                                0         -nan%                0         -nan%
+PREF_HIT_DEMAND_DPRF                                 0         -nan%                0         -nan%
+PREF_HIT_DEMAND_WB                                   0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+PREF_L1_FILL                                         0         -nan%                0         -nan%
+DEMAND_L1_FILL                                       0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+TOUCH_L1_REPLACE                                     0        0.000%                0        0.000%
+NO_TOUCH_L1_REPLACE                              32357      100.000%            58958      100.000%
+                                                 32357      100.000%            58958      100.000%
+                                                  1.00         1.00              1.00         1.00
+
+PREF_REQ_QUE_FULL                                    0                              0              
+
+STREAM_REQ_QUEUE_HIT_BY_DEMAND                       0                              0              
+
+L2HIT_STREAM_PREF_REQ_QUE_FULL                       0                              0              
+
+L2HIT_HIT_TRAIN_STREAM                               0         -nan%                0         -nan%
+L2HIT_MISS_TRAIN_STREAM                              0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+L2HIT_STREAM_TRAIN_CREATE                            0                              0              
+
+L2HIT_STREAM_BUFFER_REQ                              0                              0              
+
+L2HIT_STREAM_PREF_DCACHE_HIT                         0         -nan%                0         -nan%
+L2HIT_STREAM_PREF_DCACHE_INSERT                      0         -nan%                0         -nan%
+L2HIT_STREAM_L2_MISS                                 0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+L2HIT_STREAM_DCACHE_PORT_FULL                        0                              0              
+
+L2HIT_STREAM_PREF_L1_PORT_FULL                       0                              0              
+
+L2HIT_TRAIN_HIT_DEMAND                               0         -nan%                0         -nan%
+L2HIT_TRAIN_MISS_REQ                                 0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+L2HIT_TRAIN_FILTER_MISS                              0         -nan%                0         -nan%
+L2HIT_TRAIN_FILTER_HIT                               0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+L2HIT_PREF_REQ_DCACHE_HIT                            0         -nan%                0         -nan%
+L2HIT_PREF_REQ_DCACHE_MISS                           0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+L2HIT_L2SEND_Q_FULL                                  0         -nan%                0         -nan%
+L2HIT_L2SEND_Q_ENTER                                 0         -nan%                0         -nan%
+                                                     0         -nan%                0         -nan%
+                                                  -nan         -nan              -nan         -nan
+
+L2HIT_MEM_REQ                                        0                              0              
+
+REMOVE_REDUNDANT_STREAM_STAT                         0                              0              
+
+REPLACE_OLD_STREAM                                 811                           2232              
+
+REQ_SEND_QUEUE_STALL                                 0                              0              
+
+STREAM_ENTER_RA                                      0                              0              
+
+CORE_STREAM_LENGTH_0                                16       11.940%               62       16.848%
+CORE_STREAM_LENGTH_10                               38       28.358%              140       38.043%
+CORE_STREAM_LENGTH_20                               14       10.448%               39       10.598%
+CORE_STREAM_LENGTH_30                                8        5.970%               16        4.348%
+CORE_STREAM_LENGTH_40                                3        2.239%               10        2.717%
+CORE_STREAM_LENGTH_50                                1        0.746%                3        0.815%
+CORE_STREAM_LENGTH_60                                0        0.000%                7        1.902%
+CORE_STREAM_LENGTH_70                                3        2.239%                3        0.815%
+CORE_STREAM_LENGTH_80                                3        2.239%                5        1.359%
+CORE_STREAM_LENGTH_90                                9        6.716%               10        2.717%
+CORE_STREAM_LENGTH_100_P                            39       29.104%               73       19.837%
+                                                   134      100.000%              368      100.000%
+                                                  4.65         4.59              3.38         3.84
+
+CORE_CUM_STREAM_LENGTH_0                           132        0.153%              477        0.334%
+CORE_CUM_STREAM_LENGTH_10                          537        0.623%             1898        1.328%
+CORE_CUM_STREAM_LENGTH_20                          354        0.411%              955        0.668%
+CORE_CUM_STREAM_LENGTH_30                          268        0.311%              534        0.374%
+CORE_CUM_STREAM_LENGTH_40                          132        0.153%              436        0.305%
+CORE_CUM_STREAM_LENGTH_50                           58        0.067%              165        0.115%
+CORE_CUM_STREAM_LENGTH_60                            0        0.000%              440        0.308%
+CORE_CUM_STREAM_LENGTH_70                          224        0.260%              224        0.157%
+CORE_CUM_STREAM_LENGTH_80                          260        0.302%              426        0.298%
+CORE_CUM_STREAM_LENGTH_90                          866        1.005%              964        0.674%
+CORE_CUM_STREAM_LENGTH_100_P                     83331       96.714%           136441       95.440%
+                                                 86162      100.000%           142960      100.000%
+                                                  9.84         9.73              9.71         9.59
+
+CORE_STREAM_TRAIN_HITS_0                            73       54.478%              234       63.587%
+CORE_STREAM_TRAIN_HITS_10                           10        7.463%               33        8.967%
+CORE_STREAM_TRAIN_HITS_20                            9        6.716%               19        5.163%
+CORE_STREAM_TRAIN_HITS_30                            3        2.239%                8        2.174%
+CORE_STREAM_TRAIN_HITS_40                            4        2.985%                6        1.630%
+CORE_STREAM_TRAIN_HITS_50                            0        0.000%                0        0.000%
+CORE_STREAM_TRAIN_HITS_60                            0        0.000%                1        0.272%
+CORE_STREAM_TRAIN_HITS_70                            0        0.000%                0        0.000%
+CORE_STREAM_TRAIN_HITS_80                            0        0.000%                0        0.000%
+CORE_STREAM_TRAIN_HITS_90                            0        0.000%                0        0.000%
+CORE_STREAM_TRAIN_HITS_100_P                        35       26.119%               67       18.207%
+                                                   134      100.000%              368      100.000%
+                                                  3.01         3.96              2.16         3.51
+
+CORE_CUM_STREAM_TRAIN_HITS_0                       464        0.574%             1519        1.131%
+CORE_CUM_STREAM_TRAIN_HITS_10                      137        0.169%              415        0.309%
+CORE_CUM_STREAM_TRAIN_HITS_20                      239        0.296%              480        0.358%
+CORE_CUM_STREAM_TRAIN_HITS_30                       94        0.116%              270        0.201%
+CORE_CUM_STREAM_TRAIN_HITS_40                      186        0.230%              270        0.201%
+CORE_CUM_STREAM_TRAIN_HITS_50                        0        0.000%                0        0.000%
+CORE_CUM_STREAM_TRAIN_HITS_60                        0        0.000%               66        0.049%
+CORE_CUM_STREAM_TRAIN_HITS_70                        0        0.000%                0        0.000%
+CORE_CUM_STREAM_TRAIN_HITS_80                        0        0.000%                0        0.000%
+CORE_CUM_STREAM_TRAIN_HITS_90                        0        0.000%                0        0.000%
+CORE_CUM_STREAM_TRAIN_HITS_100_P                 79741       98.615%           131235       97.751%
+                                                 80861      100.000%           134255      100.000%
+                                                  9.88         9.84              9.80         9.73
+
+CORE_STREAM_TRAIN_CREATE                           811                           2248              
+
+
+

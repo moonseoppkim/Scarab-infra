@@ -376,6 +376,9 @@ void update_dcache_stage(Stage_Data* src_sd) {
         dc_miss_stat(op);
 
       if(op->table_info->mem_type == MEM_LD) {  // load request
+        if (&dc->dcache.is_conflict_miss)
+          STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_LOAD);
+
         if(((model->mem == MODEL_MEM) &&
             scan_stores(
               op->oracle_info.va,
@@ -507,6 +510,9 @@ void update_dcache_stage(Stage_Data* src_sd) {
         }
       } else {  // store request
         ASSERT(dc->proc_id, op->table_info->mem_type == MEM_ST);
+
+        if (&dc->dcache.is_conflict_miss)
+          STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_STORE);
 
         if(((model->mem == MODEL_MEM) &&
             new_mem_req(MRT_DSTORE, dc->proc_id, line_addr, DCACHE_LINE_SIZE,
