@@ -93,6 +93,10 @@ void init_dcache_stage(uns8 proc_id, const char* name) {
   init_cache(&dc->dcache, "DCACHE", DCACHE_SIZE, DCACHE_ASSOC, DCACHE_LINE_SIZE,
              sizeof(Dcache_Data), DCACHE_REPL);
 
+  /* initialize the fa cache structure */
+  init_cache(&dc->fa_dcache, "FA_DCACHE", DCACHE_SIZE, DCACHE_SIZE / DCACHE_LINE_SIZE, DCACHE_LINE_SIZE,
+             sizeof(Dcache_Data), DCACHE_REPL);
+
   reset_dcache_stage();
 
   dc->ports = (Ports*)malloc(sizeof(Ports) * DCACHE_BANKS);
@@ -156,10 +160,12 @@ void debug_dcache_stage() {
 /* update_dcache_stage: */
 void update_dcache_stage(Stage_Data* src_sd) {
   Dcache_Data* line;
+  Dcache_Data* fa_line;
   Counter      oldest_op_num, last_oldest_op_num;
   uns          oldest_index;
   int          start_op_count;
   Addr         line_addr;
+  Addr         fa_line_addr;
   uns          ii, jj;
 
   // {{{ phase 1 - move ops into the dcache stage
@@ -286,6 +292,9 @@ void update_dcache_stage(Stage_Data* src_sd) {
 
     line = (Dcache_Data*)cache_access(&dc->dcache, op->oracle_info.va,
                                       &line_addr, TRUE);
+
+    fa_line = (Dcache_Data*)cache_access(&dc->fa_dcache, op->oracle_info.va,
+                                      &fa_line_addr, TRUE);
     op->dcache_cycle = cycle_count;
     dc->idle_cycle   = MAX2(dc->idle_cycle, cycle_count + DCACHE_CYCLES);
 
@@ -431,6 +440,22 @@ void update_dcache_stage(Stage_Data* src_sd) {
             STAT_EVENT(op->proc_id, DCACHE_MISS_LD_ONPATH);
             op->oracle_info.dcmiss = TRUE;
             STAT_EVENT(op->proc_id, DCACHE_MISS_LD);
+
+            // stat
+            if (dc->dcache.is_compulsory_miss) {
+              STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_LOAD);
+            } else {
+              if (fa_line == NULL) {
+                dc->dcache.is_capacity_miss = TRUE;
+                dc->dcache.is_conflict_miss = FALSE;
+              }
+
+              if (dc->dcache.is_conflict_miss) {
+                STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_LOAD);
+              } else if (dc->dcache.is_capacity_miss) {
+                STAT_EVENT(op->proc_id, DCACHE_MISS_CAPACITY_LOAD);
+              }
+            }
           } else {
             wrongpath_dcmiss = TRUE;
             STAT_EVENT(op->proc_id, DCACHE_MISS_OFFPATH);
@@ -439,25 +464,12 @@ void update_dcache_stage(Stage_Data* src_sd) {
           op->state              = OS_MISS;
           op->engine_info.dcmiss = TRUE;
         } else {
-          dc->dcache.is_capacity_miss = TRUE;
-          dc->dcache.is_compulsory_miss = FALSE;
-          dc->dcache.is_conflict_miss = FALSE; 
-
           op->state = OS_WAIT_MEM;  // go into this state if no miss buffer is
                                     // available
           cmp_model.node_stage[dc->proc_id].mem_blocked = TRUE;
           mem->uncores[dc->proc_id].mem_block_start     = freq_cycle_count(
             FREQ_DOMAIN_L1);
           STAT_EVENT(op->proc_id, DCACHE_MISS_WAITMEM);
-        }
-
-        // stat
-        if (dc->dcache.is_compulsory_miss) {
-          STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_LOAD);
-        } else if (dc->dcache.is_conflict_miss) {
-          STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_LOAD);
-        } else if (dc->dcache.is_capacity_miss) {
-          STAT_EVENT(op->proc_id, DCACHE_MISS_CAPACITY_LOAD);
         }
       } else if(op->table_info->mem_type == MEM_PF ||
                 op->table_info->mem_type == MEM_WH) {
@@ -557,6 +569,22 @@ void update_dcache_stage(Stage_Data* src_sd) {
             STAT_EVENT(op->proc_id, DCACHE_MISS_ST_ONPATH);
             op->oracle_info.dcmiss = TRUE;
             STAT_EVENT(op->proc_id, DCACHE_MISS_ST);
+            
+            // stat
+            if (dc->dcache.is_compulsory_miss) {
+              STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_STORE);
+            } else {
+              if (fa_line == NULL) {
+                dc->dcache.is_capacity_miss = TRUE;
+                dc->dcache.is_conflict_miss = FALSE;
+              }
+
+              if (dc->dcache.is_conflict_miss) {
+                STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_STORE);
+              } else if (dc->dcache.is_capacity_miss) {
+                STAT_EVENT(op->proc_id, DCACHE_MISS_CAPACITY_STORE);
+              }
+            }
           } else {
             wrongpath_dcmiss = TRUE;
             STAT_EVENT(op->proc_id, DCACHE_MISS_OFFPATH);
@@ -569,24 +597,11 @@ void update_dcache_stage(Stage_Data* src_sd) {
             op->state = OS_SCHEDULED;
           }
         } else {
-          dc->dcache.is_capacity_miss = TRUE;
-          dc->dcache.is_compulsory_miss = FALSE;
-          dc->dcache.is_conflict_miss = FALSE;
-
           op->state                                     = OS_WAIT_MEM;
           cmp_model.node_stage[dc->proc_id].mem_blocked = TRUE;
           mem->uncores[dc->proc_id].mem_block_start     = freq_cycle_count(
             FREQ_DOMAIN_L1);
           STAT_EVENT(op->proc_id, DCACHE_MISS_WAITMEM);
-        }
-
-        // stat
-        if (dc->dcache.is_compulsory_miss) {
-          STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_STORE);
-        } else if (dc->dcache.is_conflict_miss) {
-          STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_STORE);
-        } else if (dc->dcache.is_capacity_miss) {
-          STAT_EVENT(op->proc_id, DCACHE_MISS_CAPACITY_STORE);
         }
       }
     }
@@ -619,6 +634,7 @@ Flag dcache_fill_line(Mem_Req* req) {
              N_BIT_MASK(LOG2(DCACHE_BANKS));
   Dcache_Data* data;
   Addr         line_addr, repl_line_addr;
+  Addr         fa_line_addr, fa_repl_line_addr;
   Op*          op;
   Op**         op_p  = (Op**)list_start_head_traversal(&req->op_ptrs);
   Counter* op_unique = (Counter*)list_start_head_traversal(&req->op_uniques);
@@ -703,6 +719,8 @@ Flag dcache_fill_line(Mem_Req* req) {
 
     data = (Dcache_Data*)cache_insert(&dc->dcache, dc->proc_id, req->addr,
                                       &line_addr, &repl_line_addr);
+    cache_insert(&dc->fa_dcache, dc->proc_id, req->addr,
+                                      &fa_line_addr, &fa_repl_line_addr);
     DEBUG(dc->proc_id,
           "Filling dcache  off_path:%d addr:0x%s  :%7d index:%7d op_count:%d "
           "oldest:%lld\n",

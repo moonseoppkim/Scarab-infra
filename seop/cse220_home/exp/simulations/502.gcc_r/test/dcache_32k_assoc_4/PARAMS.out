@@ -119,14 +119,14 @@
 --ibtb_off_path_writes 1                         # Allow off path ops to update the ibtb.
 --tc_entries 4096
 --tc_assoc 4
---pref_stream_on 1
+--pref_stream_on 0
 --stream_prefetch_n 4
 --stream_start_dis 1
 --stream_length 64
 --stream_train_num 4
 --stream_create_on_dc_miss 0
 --stream_create_on_l1_miss 1
---pref_framework_on 1
+--pref_framework_on 0
 --pref_ul1req_queue_overwrite_on_full 1
 --pref_train_on_pref_misses 0
 --pref_oracle_train_on 0
@@ -779,7 +779,7 @@ POWER_INTF_REF_CHIP_TECH_NM              22
 POWER_INTF_REF_CHIP_FREQ                 (3.2e9)                         
 POWER_INTF_REF_MEMORY_FREQ               (0.8e9)                         
 POWER_OTHER                              (0.0)                           
-PREF_STREAM_ON                           FALSE                           1
+PREF_STREAM_ON                           FALSE                           0
 PREF_STREAM_PER_CORE_ENABLE              FALSE                           
 STREAM_BUFFER_N                          16                              
 STREAM_PREFETCH_N                        2                               4
@@ -810,7 +810,7 @@ L2HIT_PREF_REQ_Q_SIZE                    128
 L2HIT_L2ACCESS_REQ_Q_SIZE                64                              
 PREF_STREAM_ACCPERSTREAM                 FALSE                           
 PREF_ACC_DISTANCE_10                     128                             
-PREF_FRAMEWORK_ON                        FALSE                           1
+PREF_FRAMEWORK_ON                        FALSE                           0
 PREF_TRACE_ON                            FALSE                           
 PREF_UMLC_ON                             FALSE                           
 PREF_UL1_ON                              TRUE                            
