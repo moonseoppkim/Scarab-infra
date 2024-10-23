@@ -273,9 +273,9 @@ void* cache_access(Cache* cache, Addr addr, Addr* line_addr, Flag update_repl) {
   
   cache->is_compulsory_miss = FALSE; 
   cache->is_conflict_miss = TRUE;
-  cache->is_compulsory_miss = FALSE;
+  cache->is_capacity_miss = FALSE;
 
-  if(strcmp(cache->name, "DCACHE") == 0) {
+  if(strcmp(cache->name, "DCACHE") == 0 || strcmp(cache->name, "FA_DCACHE") == 0) {
     Flag new_entry = FALSE;
     void* value = hash_table_access_create(&cache->accessed_blocks, *line_addr, &new_entry);
 
