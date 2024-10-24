@@ -292,7 +292,7 @@ void* cache_access(Cache* cache, Addr addr, Addr* line_addr, Flag update_repl) {
         if(!line->valid) {
           has_empty_slot = TRUE;
           break;
-        }
+    } 
       }
 
         if (has_empty_slot) {
