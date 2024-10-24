@@ -272,7 +272,7 @@ void* cache_access(Cache* cache, Addr addr, Addr* line_addr, Flag update_repl) {
   }
   
   cache->is_compulsory_miss = FALSE; 
-  cache->is_conflict_miss = TRUE;
+  cache->is_conflict_miss = FALSE;
   cache->is_capacity_miss = FALSE;
 
   if(strcmp(cache->name, "DCACHE") == 0 || strcmp(cache->name, "FA_DCACHE") == 0) {
@@ -282,16 +282,28 @@ void* cache_access(Cache* cache, Addr addr, Addr* line_addr, Flag update_repl) {
     if (new_entry) {
         cache->is_compulsory_miss = TRUE;
         cache->is_conflict_miss = FALSE;
+        cache->is_capacity_miss = FALSE;
         Flag *dummy = (Flag *) value;
         *dummy = TRUE;
     } else {
+      Flag has_empty_slot = FALSE;
       for(int ii = 0; ii < cache->assoc; ii++) {
         Cache_Entry* line = &cache->entries[set][ii];
         if(!line->valid) {
-          cache->is_conflict_miss = FALSE;
+          has_empty_slot = TRUE;
           break;
-        }
+    } 
       }
+
+        if (has_empty_slot) {
+            cache->is_compulsory_miss = FALSE;
+            cache->is_conflict_miss = FALSE;
+            cache->is_capacity_miss = TRUE;
+        } else {
+            cache->is_compulsory_miss = FALSE;
+            cache->is_conflict_miss = TRUE;
+            cache->is_capacity_miss = FALSE;
+        }
     }
   }
 
