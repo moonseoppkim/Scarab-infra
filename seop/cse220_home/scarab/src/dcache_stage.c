@@ -445,8 +445,7 @@ void update_dcache_stage(Stage_Data* src_sd) {
             if (dc->dcache.is_compulsory_miss) {
               STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_LOAD);
             } else {
-              //if (dc->fa_dcache.is_conflict_miss == TRUE || dc->dcache.is_capacity_miss == TRUE) {
-              if (dc->fa_dcache.is_conflict_miss == TRUE) {
+              if (dc->fa_dcache.is_capacity_miss == TRUE) {
                 dc->dcache.is_capacity_miss = TRUE;
                 dc->dcache.is_conflict_miss = FALSE;
               }
@@ -577,8 +576,7 @@ void update_dcache_stage(Stage_Data* src_sd) {
             if (dc->dcache.is_compulsory_miss) {
               STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_STORE);
             } else {
-              //if (dc->fa_dcache.is_conflict_miss == TRUE || dc->dcache.is_capacity_miss == TRUE) {
-              if (dc->fa_dcache.is_conflict_miss == TRUE) {
+              if (dc->fa_dcache.is_capacity_miss == TRUE) {
                 dc->dcache.is_capacity_miss = TRUE;
                 dc->dcache.is_conflict_miss = FALSE;
               }
