@@ -289,12 +289,12 @@ void update_dcache_stage(Stage_Data* src_sd) {
       ideal_l2l1_prefetcher(op);
 
     /* now access the dcache with it */
+    fa_line = (Dcache_Data*)cache_access(&dc->fa_dcache, op->oracle_info.va,
+                                      &fa_line_addr, TRUE);
 
     line = (Dcache_Data*)cache_access(&dc->dcache, op->oracle_info.va,
                                       &line_addr, TRUE);
 
-    fa_line = (Dcache_Data*)cache_access(&dc->fa_dcache, op->oracle_info.va,
-                                      &fa_line_addr, TRUE);
     op->dcache_cycle = cycle_count;
     dc->idle_cycle   = MAX2(dc->idle_cycle, cycle_count + DCACHE_CYCLES);
 
@@ -445,7 +445,8 @@ void update_dcache_stage(Stage_Data* src_sd) {
             if (dc->dcache.is_compulsory_miss) {
               STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_LOAD);
             } else {
-              if (dc->fa_dcache.is_conflict_miss == TRUE || dc->dcache.is_capacity_miss == TRUE) {
+              //if (dc->fa_dcache.is_conflict_miss == TRUE || dc->dcache.is_capacity_miss == TRUE) {
+              if (dc->fa_dcache.is_conflict_miss == TRUE) {
                 dc->dcache.is_capacity_miss = TRUE;
                 dc->dcache.is_conflict_miss = FALSE;
               }
@@ -576,7 +577,8 @@ void update_dcache_stage(Stage_Data* src_sd) {
             if (dc->dcache.is_compulsory_miss) {
               STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_STORE);
             } else {
-              if (dc->fa_dcache.is_conflict_miss == TRUE || dc->dcache.is_capacity_miss == TRUE) {
+              //if (dc->fa_dcache.is_conflict_miss == TRUE || dc->dcache.is_capacity_miss == TRUE) {
+              if (dc->fa_dcache.is_conflict_miss == TRUE) {
                 dc->dcache.is_capacity_miss = TRUE;
                 dc->dcache.is_conflict_miss = FALSE;
               }
