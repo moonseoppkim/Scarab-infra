@@ -256,9 +256,3 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/tools" TYPE FILE FILES "/home/seop/scarab/src/build/opt/deps/dynamorio/drcachesim.drrun64")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/seop/scarab/src/build/opt/deps/dynamorio/clients/drcachesim/drpt2trace/cmake_install.cmake")
-
-endif()
-

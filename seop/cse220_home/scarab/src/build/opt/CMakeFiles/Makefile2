@@ -295,12 +295,11 @@ deps/dynamorio/clients/drcachesim/all: deps/dynamorio/clients/drcachesim/CMakeFi
 deps/dynamorio/clients/drcachesim/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/all
 deps/dynamorio/clients/drcachesim/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all
 deps/dynamorio/clients/drcachesim/all: deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/all
-deps/dynamorio/clients/drcachesim/all: deps/dynamorio/clients/drcachesim/drpt2trace/all
 
 .PHONY : deps/dynamorio/clients/drcachesim/all
 
 # Recursive "preinstall" directory target.
-deps/dynamorio/clients/drcachesim/preinstall: deps/dynamorio/clients/drcachesim/drpt2trace/preinstall
+deps/dynamorio/clients/drcachesim/preinstall:
 
 .PHONY : deps/dynamorio/clients/drcachesim/preinstall
 
@@ -332,55 +331,8 @@ deps/dynamorio/clients/drcachesim/clean: deps/dynamorio/clients/drcachesim/CMake
 deps/dynamorio/clients/drcachesim/clean: deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/clean
 deps/dynamorio/clients/drcachesim/clean: deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/clean
 deps/dynamorio/clients/drcachesim/clean: deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_docs.dir/clean
-deps/dynamorio/clients/drcachesim/clean: deps/dynamorio/clients/drcachesim/drpt2trace/clean
 
 .PHONY : deps/dynamorio/clients/drcachesim/clean
-
-#=============================================================================
-# Directory level rules for directory deps/dynamorio/clients/drcachesim/drpt2trace
-
-# Recursive "all" directory target.
-deps/dynamorio/clients/drcachesim/drpt2trace/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/all
-
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/all
-
-# Recursive "preinstall" directory target.
-deps/dynamorio/clients/drcachesim/drpt2trace/preinstall: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/preinstall
-
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/preinstall
-
-# Recursive "clean" directory target.
-deps/dynamorio/clients/drcachesim/drpt2trace/clean: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/clean
-deps/dynamorio/clients/drcachesim/drpt2trace/clean: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/clean
-deps/dynamorio/clients/drcachesim/drpt2trace/clean: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/clean
-deps/dynamorio/clients/drcachesim/drpt2trace/clean: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/clean
-
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/clean
-
-#=============================================================================
-# Directory level rules for directory deps/dynamorio/clients/drcachesim/drpt2trace/libipt
-
-# Recursive "all" directory target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
-
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/all
-
-# Recursive "preinstall" directory target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/preinstall:
-
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/preinstall
-
-# Recursive "clean" directory target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/clean: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/clean
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/clean: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/clean
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/clean: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/clean
-
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/clean
 
 #=============================================================================
 # Directory level rules for directory deps/dynamorio/clients/drcov
@@ -933,7 +885,6 @@ ramulator/clean: ramulator/CMakeFiles/ramulator.dir/clean
 
 # All Build rule for target.
 CMakeFiles/scarab.dir/all: deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/all
-CMakeFiles/scarab.dir/all: deps/dynamorio/core/CMakeFiles/drdecode.dir/all
 CMakeFiles/scarab.dir/all: deps/dynamorio/core/CMakeFiles/drlibc.dir/all
 CMakeFiles/scarab.dir/all: deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
 CMakeFiles/scarab.dir/all: deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/all
@@ -941,11 +892,6 @@ CMakeFiles/scarab.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/director
 CMakeFiles/scarab.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all
 CMakeFiles/scarab.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/all
 CMakeFiles/scarab.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/all
-CMakeFiles/scarab.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all
-CMakeFiles/scarab.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all
-CMakeFiles/scarab.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-CMakeFiles/scarab.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-CMakeFiles/scarab.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
 CMakeFiles/scarab.dir/all: deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 CMakeFiles/scarab.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all
 CMakeFiles/scarab.dir/all: deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/all
@@ -956,12 +902,12 @@ CMakeFiles/scarab.dir/all: ramulator/CMakeFiles/ramulator.dir/all
 CMakeFiles/scarab.dir/all: pin/pin_lib/CMakeFiles/pin_lib_for_scarab.dir/all
 	$(MAKE) -f CMakeFiles/scarab.dir/build.make CMakeFiles/scarab.dir/depend
 	$(MAKE) -f CMakeFiles/scarab.dir/build.make CMakeFiles/scarab.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=86,87,88,89,90,91,92,93,94,95,96,97 "Built target scarab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=85,86,87,88,89,90,91,92,93,94,95,96,97 "Built target scarab"
 .PHONY : CMakeFiles/scarab.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/scarab.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 45
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 41
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/scarab.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : CMakeFiles/scarab.dir/rule
@@ -1011,12 +957,12 @@ deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/all: deps/dynamorio/CMakeFiles/api
 deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/all: deps/dynamorio/core/CMakeFiles/generate_syslog.dir/all
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/build.make deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/depend
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/build.make deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=19 "Built target drmemfuncs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drmemfuncs"
 .PHONY : deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/rule
@@ -1039,7 +985,7 @@ deps/dynamorio/core/CMakeFiles/drdecode.dir/all: deps/dynamorio/core/CMakeFiles/
 deps/dynamorio/core/CMakeFiles/drdecode.dir/all: deps/dynamorio/core/CMakeFiles/generate_syslog.dir/all
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drdecode.dir/build.make deps/dynamorio/core/CMakeFiles/drdecode.dir/depend
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drdecode.dir/build.make deps/dynamorio/core/CMakeFiles/drdecode.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=12,13,14 "Built target drdecode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=13,14,15 "Built target drdecode"
 .PHONY : deps/dynamorio/core/CMakeFiles/drdecode.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1066,7 +1012,7 @@ deps/dynamorio/core/CMakeFiles/drdecode.dir/clean:
 deps/dynamorio/core/CMakeFiles/drlibc.dir/all: deps/dynamorio/core/CMakeFiles/generate_syslog.dir/all
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drlibc.dir/build.make deps/dynamorio/core/CMakeFiles/drlibc.dir/depend
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drlibc.dir/build.make deps/dynamorio/core/CMakeFiles/drlibc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=17,18 "Built target drlibc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=18,19 "Built target drlibc"
 .PHONY : deps/dynamorio/core/CMakeFiles/drlibc.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1095,12 +1041,12 @@ deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/all: deps/dynamorio/core/CMa
 deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/all: deps/dynamorio/core/CMakeFiles/generate_syslog.dir/all
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/build.make deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/depend
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/build.make deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=55,56,57,58,59,60,61,62,63,64,65,66 "Built target dynamorio_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=57,58,59,60,61,62,63,64,65,66,67,68,69 "Built target dynamorio_static"
 .PHONY : deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/rule
@@ -1152,12 +1098,12 @@ deps/dynamorio/core/CMakeFiles/dynamorio.dir/all: deps/dynamorio/core/CMakeFiles
 deps/dynamorio/core/CMakeFiles/dynamorio.dir/all: deps/dynamorio/core/CMakeFiles/generate_syslog.dir/all
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/dynamorio.dir/build.make deps/dynamorio/core/CMakeFiles/dynamorio.dir/depend
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/dynamorio.dir/build.make deps/dynamorio/core/CMakeFiles/dynamorio.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=43,44,45,46,47,48,49,50,51,52,53,54 "Built target dynamorio"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=45,46,47,48,49,50,51,52,53,54,55,56 "Built target dynamorio"
 .PHONY : deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/core/CMakeFiles/dynamorio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/core/CMakeFiles/dynamorio.dir/rule
@@ -1181,12 +1127,12 @@ deps/dynamorio/core/CMakeFiles/drpreload.dir/all: deps/dynamorio/core/CMakeFiles
 deps/dynamorio/core/CMakeFiles/drpreload.dir/all: deps/dynamorio/core/CMakeFiles/generate_syslog.dir/all
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drpreload.dir/build.make deps/dynamorio/core/CMakeFiles/drpreload.dir/depend
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drpreload.dir/build.make deps/dynamorio/core/CMakeFiles/drpreload.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=34 "Built target drpreload"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=36 "Built target drpreload"
 .PHONY : deps/dynamorio/core/CMakeFiles/drpreload.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/core/CMakeFiles/drpreload.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/core/CMakeFiles/drpreload.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/core/CMakeFiles/drpreload.dir/rule
@@ -1211,12 +1157,12 @@ deps/dynamorio/core/CMakeFiles/drinjectlib.dir/all: deps/dynamorio/core/CMakeFil
 deps/dynamorio/core/CMakeFiles/drinjectlib.dir/all: deps/dynamorio/core/CMakeFiles/generate_syslog.dir/all
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drinjectlib.dir/build.make deps/dynamorio/core/CMakeFiles/drinjectlib.dir/depend
 	$(MAKE) -f deps/dynamorio/core/CMakeFiles/drinjectlib.dir/build.make deps/dynamorio/core/CMakeFiles/drinjectlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=16 "Built target drinjectlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=17 "Built target drinjectlib"
 .PHONY : deps/dynamorio/core/CMakeFiles/drinjectlib.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/core/CMakeFiles/drinjectlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/core/CMakeFiles/drinjectlib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/core/CMakeFiles/drinjectlib.dir/rule
@@ -1239,12 +1185,12 @@ deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/all: deps/dynamorio/core/CMa
 deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/all: deps/dynamorio/core/CMakeFiles/drlibc.dir/all
 	$(MAKE) -f deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/build.make deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/depend
 	$(MAKE) -f deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/build.make deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=15 "Built target drfrontendlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=16 "Built target drfrontendlib"
 .PHONY : deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/rule
@@ -1269,12 +1215,12 @@ deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/all: deps/dynamorio/core/CMake
 deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/all: deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/all
 	$(MAKE) -f deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/build.make deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/depend
 	$(MAKE) -f deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/build.make deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=8 "Built target drconfiglib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=9 "Built target drconfiglib"
 .PHONY : deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/rule
@@ -1331,7 +1277,7 @@ deps/dynamorio/tools/CMakeFiles/drconfig.dir/all: deps/dynamorio/libutil/CMakeFi
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/tools/CMakeFiles/drconfig.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/tools/CMakeFiles/drconfig.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/tools/CMakeFiles/drconfig.dir/rule
@@ -1380,7 +1326,7 @@ deps/dynamorio/tools/CMakeFiles/drloader.dir/clean:
 deps/dynamorio/tools/CMakeFiles/runstats.dir/all:
 	$(MAKE) -f deps/dynamorio/tools/CMakeFiles/runstats.dir/build.make deps/dynamorio/tools/CMakeFiles/runstats.dir/depend
 	$(MAKE) -f deps/dynamorio/tools/CMakeFiles/runstats.dir/build.make deps/dynamorio/tools/CMakeFiles/runstats.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=85 "Built target runstats"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=84 "Built target runstats"
 .PHONY : deps/dynamorio/tools/CMakeFiles/runstats.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1412,12 +1358,12 @@ deps/dynamorio/tools/CMakeFiles/drrun.dir/all: deps/dynamorio/libutil/CMakeFiles
 deps/dynamorio/tools/CMakeFiles/drrun.dir/all: deps/dynamorio/libutil/CMakeFiles/drconfiglib.dir/all
 	$(MAKE) -f deps/dynamorio/tools/CMakeFiles/drrun.dir/build.make deps/dynamorio/tools/CMakeFiles/drrun.dir/depend
 	$(MAKE) -f deps/dynamorio/tools/CMakeFiles/drrun.dir/build.make deps/dynamorio/tools/CMakeFiles/drrun.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=37 "Built target drrun"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drrun"
 .PHONY : deps/dynamorio/tools/CMakeFiles/drrun.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/tools/CMakeFiles/drrun.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/tools/CMakeFiles/drrun.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/tools/CMakeFiles/drrun.dir/rule
@@ -1449,7 +1395,7 @@ deps/dynamorio/tools/CMakeFiles/drinject.dir/all: deps/dynamorio/libutil/CMakeFi
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/tools/CMakeFiles/drinject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/tools/CMakeFiles/drinject.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/tools/CMakeFiles/drinject.dir/rule
@@ -1499,12 +1445,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/all: d
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_simulator.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=27 "Built target drmemtrace_record_filter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drmemtrace_record_filter"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_record_filter.dir/rule
@@ -1555,12 +1501,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_invariant_checker.dir/cl
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_basic_counts.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_basic_counts.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_basic_counts.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_basic_counts.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_basic_counts.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drmemtrace_basic_counts"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=25 "Built target drmemtrace_basic_counts"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_basic_counts.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_basic_counts.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_basic_counts.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_basic_counts.dir/rule
@@ -1593,7 +1539,7 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/scheduler_launcher.dir/all: deps/dy
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/scheduler_launcher.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/scheduler_launcher.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/scheduler_launcher.dir/rule
@@ -1615,12 +1561,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/scheduler_launcher.dir/clean:
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_syscall_mix.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_syscall_mix.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_syscall_mix.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_syscall_mix.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_syscall_mix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drmemtrace_syscall_mix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=34 "Built target drmemtrace_syscall_mix"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_syscall_mix.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_syscall_mix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_syscall_mix.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_syscall_mix.dir/rule
@@ -1650,7 +1596,7 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/directory_iterator.dir/all: deps/dy
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/directory_iterator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/directory_iterator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/directory_iterator.dir/rule
@@ -1678,7 +1624,7 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_view.dir/all: deps/dynam
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_view.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_view.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_view.dir/rule
@@ -1699,28 +1645,22 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_view.dir/clean:
 # All Build rule for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/core/CMakeFiles/drdecode.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/core/CMakeFiles/drlibc.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/directory_iterator.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all: deps/dynamorio/ext/drutil/CMakeFiles/drutil_static.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=26 "Built target drmemtrace_raw2trace"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=27,28 "Built target drmemtrace_raw2trace"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/rule
@@ -1741,7 +1681,6 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/clean:
 # All Build rule for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/core/CMakeFiles/drdecode.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/core/CMakeFiles/drlibc.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/core/CMakeFiles/dynamorio_static.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
@@ -1751,11 +1690,6 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/d
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/all
@@ -1769,7 +1703,7 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all: deps/d
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 42
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 38
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/opcode_mix_launcher.dir/rule
@@ -1792,12 +1726,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/all: deps
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/all: deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=25 "Built target drmemtrace_opcode_mix"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=26 "Built target drmemtrace_opcode_mix"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/rule
@@ -1819,7 +1753,7 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_opcode_mix.dir/clean:
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_simulator.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_simulator.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_simulator.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_simulator.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_simulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=28,29 "Built target drmemtrace_simulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=30,31 "Built target drmemtrace_simulator"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_simulator.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1873,7 +1807,7 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_histogram.dir/clean:
 deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/all:
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=77 "Built target minizip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=76 "Built target minizip"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/all
 
 # Build rule for subdir invocation for target.
@@ -1918,11 +1852,6 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/
 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_distance.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/all: deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/all
@@ -1958,12 +1887,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim.dir/clean:
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=24 "Built target drmemtrace_func_view"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drmemtrace_func_view"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_func_view.dir/rule
@@ -1997,7 +1926,7 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/record_filter_launcher.dir/all: dep
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/record_filter_launcher.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/record_filter_launcher.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/record_filter_launcher.dir/rule
@@ -2019,12 +1948,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/record_filter_launcher.dir/clean:
 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_ops.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_ops.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_ops.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_ops.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_ops.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drcachesim_ops"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=7 "Built target drcachesim_ops"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_ops.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_ops.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_ops.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_ops.dir/rule
@@ -2051,12 +1980,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/all: deps/d
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=22,23 "Built target drmemtrace_analyzer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=23,24 "Built target drmemtrace_analyzer"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/rule
@@ -2141,12 +2070,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/all: deps/dy
 deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=67 "Built target histogram_launcher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=70 "Built target histogram_launcher"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/histogram_launcher.dir/rule
@@ -2181,7 +2110,7 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace.dir/all: deps/dynamorio/
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace.dir/all: deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=20,21 "Built target drmemtrace"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=20,21,22 "Built target drmemtrace"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2221,12 +2150,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/all: deps/dyn
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/all: deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer_static.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=30,31,32 "Built target drmemtrace_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=32,33 "Built target drmemtrace_static"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 24
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 22
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/rule
@@ -2248,12 +2177,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_static.dir/clean:
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drmemtrace_reuse_time"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=29 "Built target drmemtrace_reuse_time"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_reuse_time.dir/rule
@@ -2280,11 +2209,6 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio
 deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/directory_iterator.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_raw2trace.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all
 deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/all
@@ -2293,12 +2217,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio
 deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all: deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=36 "Built target drraw2trace"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=37 "Built target drraw2trace"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 28
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 26
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drraw2trace.dir/rule
@@ -2326,12 +2250,12 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/all:
 deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/all: deps/dynamorio/clients/drcachesim/CMakeFiles/drmemtrace_analyzer.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/build.make deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=81 "Built target prefetch_analyzer_launcher"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=80 "Built target prefetch_analyzer_launcher"
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 7
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/prefetch_analyzer_launcher.dir/rule
@@ -2358,7 +2282,7 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_docs.dir/all: deps/dynam
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_docs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_docs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_docs.dir/rule
@@ -2374,183 +2298,6 @@ deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_docs.dir/clean:
 .PHONY : deps/dynamorio/clients/drcachesim/CMakeFiles/drcachesim_docs.dir/clean
 
 #=============================================================================
-# Target rules for target deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir
-
-# All Build rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all: deps/dynamorio/core/CMakeFiles/drdecode.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all: deps/dynamorio/core/CMakeFiles/drlibc.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all: deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/depend
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=35 "Built target drpt2trace"
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all
-
-# Build rule for subdir invocation for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 23
-	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/rule
-
-# Convenience name for target.
-drpt2trace: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/rule
-
-.PHONY : drpt2trace
-
-# clean rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/clean:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/clean
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/clean
-
-#=============================================================================
-# Target rules for target deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir
-
-# All Build rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all: deps/dynamorio/core/CMakeFiles/drdecode.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all: deps/dynamorio/core/CMakeFiles/drlibc.dir/all
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/depend
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drir2trace"
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all
-
-# Build rule for subdir invocation for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 5
-	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/rule
-
-# Convenience name for target.
-drir2trace: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/rule
-
-.PHONY : drir2trace
-
-# clean rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/clean:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/clean
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/clean
-
-#=============================================================================
-# Target rules for target deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir
-
-# All Build rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all: deps/dynamorio/CMakeFiles/api_headers.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all: deps/dynamorio/core/CMakeFiles/drdecode.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all: deps/dynamorio/core/CMakeFiles/drlibc.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/depend
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drpt2ir"
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all
-
-# Build rule for subdir invocation for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/rule
-
-# Convenience name for target.
-drpt2ir: deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/rule
-
-.PHONY : drpt2ir
-
-# clean rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/clean:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/clean
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/clean
-
-#=============================================================================
-# Target rules for target deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir
-
-# All Build rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/depend
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target ipt-sb"
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-
-# Build rule for subdir invocation for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/rule
-
-# Convenience name for target.
-ipt-sb: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/rule
-
-.PHONY : ipt-sb
-
-# clean rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/clean:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/clean
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/clean
-
-#=============================================================================
-# Target rules for target deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir
-
-# All Build rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/depend
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target pevent"
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-
-# Build rule for subdir invocation for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/rule
-
-# Convenience name for target.
-pevent: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/rule
-
-.PHONY : pevent
-
-# clean rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/clean:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/clean
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/clean
-
-#=============================================================================
-# Target rules for target deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir
-
-# All Build rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/depend
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=71,72,73,74 "Built target ipt"
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
-
-# Build rule for subdir invocation for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/rule
-
-# Convenience name for target.
-ipt: deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/rule
-
-.PHONY : ipt
-
-# clean rule for target.
-deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/clean:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/clean
-.PHONY : deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/clean
-
-#=============================================================================
 # Target rules for target deps/dynamorio/clients/drcov/CMakeFiles/drcov_docs.dir
 
 # All Build rule for target.
@@ -2562,7 +2309,7 @@ deps/dynamorio/clients/drcov/CMakeFiles/drcov_docs.dir/all: deps/dynamorio/clien
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcov/CMakeFiles/drcov_docs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 21
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcov/CMakeFiles/drcov_docs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcov/CMakeFiles/drcov_docs.dir/rule
@@ -2594,12 +2341,12 @@ deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/all: deps/dynamorio/ext/d
 deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/all: deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/build.make deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/build.make deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drcov2lcov"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=10 "Built target drcov2lcov"
 .PHONY : deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 21
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcov/CMakeFiles/drcov2lcov.dir/rule
@@ -2632,7 +2379,7 @@ deps/dynamorio/clients/drcov/CMakeFiles/drcov.dir/all: deps/dynamorio/ext/drcovl
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcov/CMakeFiles/drcov.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcov/CMakeFiles/drcov.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcov/CMakeFiles/drcov.dir/rule
@@ -2659,7 +2406,7 @@ deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_docs.dir/all: deps/dynamorio
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_docs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_docs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_docs.dir/rule
@@ -2681,12 +2428,12 @@ deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_docs.dir/clean:
 deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_ops.dir/all:
 	$(MAKE) -f deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_ops.dir/build.make deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_ops.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_ops.dir/build.make deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_ops.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drcpusim_ops"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=12 "Built target drcpusim_ops"
 .PHONY : deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_ops.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_ops.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_ops.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim_ops.dir/rule
@@ -2714,12 +2461,12 @@ deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/all: deps/dynamorio/ext/
 deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/all: deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/all
 	$(MAKE) -f deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/build.make deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/depend
 	$(MAKE) -f deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/build.make deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=11 "Built target drcpusim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drcpusim"
 .PHONY : deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/clients/drcpusim/CMakeFiles/drcpusim.dir/rule
@@ -2779,7 +2526,7 @@ deps/dynamorio/api/docs/CMakeFiles/embed_docs.dir/all: deps/dynamorio/api/docs/C
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/docs/CMakeFiles/embed_docs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/docs/CMakeFiles/embed_docs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/docs/CMakeFiles/embed_docs.dir/rule
@@ -2809,7 +2556,7 @@ deps/dynamorio/api/docs/CMakeFiles/htmldocs.dir/all: deps/dynamorio/clients/drcp
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/docs/CMakeFiles/htmldocs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 23
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/docs/CMakeFiles/htmldocs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/docs/CMakeFiles/htmldocs.dir/rule
@@ -2832,12 +2579,12 @@ deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all: deps/dynamorio/
 deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all: deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/build.make deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/build.make deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=9 "Built target drcontainers"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drcontainers"
 .PHONY : deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/rule
@@ -2861,12 +2608,12 @@ deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all: deps/dynamorio/core/CM
 deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all: deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/build.make deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/build.make deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drmgr_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=35 "Built target drmgr_static"
 .PHONY : deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/rule
@@ -2890,12 +2637,12 @@ deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/all: deps/dynamorio/core/CMakeFile
 deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/all: deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/build.make deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/build.make deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=33 "Built target drmgr"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drmgr"
 .PHONY : deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/rule
@@ -2921,7 +2668,7 @@ deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/all: deps/dynamorio/ext/drmgr/C
 deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/build.make deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/build.make deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=42 "Built target drx_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=44 "Built target drx_static"
 .PHONY : deps/dynamorio/ext/drx/CMakeFiles/drx_static.dir/all
 
 # Build rule for subdir invocation for target.
@@ -2952,12 +2699,12 @@ deps/dynamorio/ext/drx/CMakeFiles/drx.dir/all: deps/dynamorio/ext/drmgr/CMakeFil
 deps/dynamorio/ext/drx/CMakeFiles/drx.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drx/CMakeFiles/drx.dir/build.make deps/dynamorio/ext/drx/CMakeFiles/drx.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drx/CMakeFiles/drx.dir/build.make deps/dynamorio/ext/drx/CMakeFiles/drx.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drx"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=43 "Built target drx"
 .PHONY : deps/dynamorio/ext/drx/CMakeFiles/drx.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drx/CMakeFiles/drx.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drx/CMakeFiles/drx.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drx/CMakeFiles/drx.dir/rule
@@ -2982,12 +2729,12 @@ deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/all: deps/dynamorio/ext/d
 deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/build.make deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/build.make deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=41 "Built target drwrap_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drwrap_static"
 .PHONY : deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drwrap/CMakeFiles/drwrap_static.dir/rule
@@ -3012,12 +2759,12 @@ deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/all: deps/dynamorio/ext/drcontai
 deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/build.make deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/build.make deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drwrap"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=42 "Built target drwrap"
 .PHONY : deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/rule
@@ -3042,7 +2789,7 @@ deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/all: deps/dynamorio/ext/drc
 deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/build.make deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/build.make deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drreg_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=38 "Built target drreg_static"
 .PHONY : deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3077,7 +2824,7 @@ deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all: deps/dynamorio/ext/drmgr/CMak
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/rule
@@ -3103,12 +2850,12 @@ deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/all: deps/dynamorio/ext
 deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/build.make deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/build.make deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=3 "Built target drbbdup_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drbbdup_static"
 .PHONY : deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup_static.dir/rule
@@ -3134,12 +2881,12 @@ deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/all: deps/dynamorio/ext/drmgr/
 deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/build.make deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/build.make deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drbbdup"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=3 "Built target drbbdup"
 .PHONY : deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drbbdup/CMakeFiles/drbbdup.dir/rule
@@ -3167,7 +2914,7 @@ deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_bench.dir/all: deps/dynamorio/ext/dr
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_bench.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_bench.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_bench.dir/rule
@@ -3191,12 +2938,12 @@ deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/all: deps/dynamorio/core/
 deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/all: deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/build.make deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/build.make deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=39 "Built target drsyms_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=41 "Built target drsyms_static"
 .PHONY : deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drsyms/CMakeFiles/drsyms_static.dir/rule
@@ -3220,12 +2967,12 @@ deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/all: deps/dynamorio/core/CMakeFi
 deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/all: deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/build.make deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/build.make deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=38 "Built target drsyms"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=39,40 "Built target drsyms"
 .PHONY : deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/rule
@@ -3255,7 +3002,7 @@ deps/dynamorio/ext/drutil/CMakeFiles/drutil_static.dir/all: deps/dynamorio/ext/d
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drutil/CMakeFiles/drutil_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drutil/CMakeFiles/drutil_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drutil/CMakeFiles/drutil_static.dir/rule
@@ -3280,12 +3027,12 @@ deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/all: deps/dynamorio/ext/drcontai
 deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/build.make deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/build.make deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=40 "Built target drutil"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drutil"
 .PHONY : deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/rule
@@ -3312,12 +3059,12 @@ deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/all: deps/dynamorio/e
 deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg_static.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/build.make deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drcovlib_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=11 "Built target drcovlib_static"
 .PHONY : deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib_static.dir/rule
@@ -3344,12 +3091,12 @@ deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/all: deps/dynamorio/ext/drx/
 deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/build.make deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/build.make deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=10 "Built target drcovlib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drcovlib"
 .PHONY : deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drcovlib/CMakeFiles/drcovlib.dir/rule
@@ -3411,7 +3158,7 @@ deps/dynamorio/ext/drstatecmp/CMakeFiles/drstatecmp.dir/all: deps/dynamorio/ext/
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drstatecmp/CMakeFiles/drstatecmp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drstatecmp/CMakeFiles/drstatecmp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drstatecmp/CMakeFiles/drstatecmp.dir/rule
@@ -3439,7 +3186,7 @@ deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer_static.dir/all: deps/dynamor
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer_static.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer_static.dir/rule
@@ -3467,7 +3214,7 @@ deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer.dir/all: deps/dynamorio/core
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drpttracer/CMakeFiles/drpttracer.dir/rule
@@ -3490,7 +3237,7 @@ deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack_static.dir/all: deps/dynam
 deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack_static.dir/all: deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack_static.dir/build.make deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack_static.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack_static.dir/build.make deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drcallstack_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=8 "Built target drcallstack_static"
 .PHONY : deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack_static.dir/all
 
 # Build rule for subdir invocation for target.
@@ -3518,12 +3265,12 @@ deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/all: deps/dynamorio/CM
 deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/all: deps/dynamorio/core/CMakeFiles/dynamorio.dir/all
 	$(MAKE) -f deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/build.make deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/depend
 	$(MAKE) -f deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/build.make deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=7 "Built target drcallstack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target drcallstack"
 .PHONY : deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/ext/drcallstack/CMakeFiles/drcallstack.dir/rule
@@ -3551,7 +3298,7 @@ deps/dynamorio/api/samples/CMakeFiles/tracedump.dir/all: deps/dynamorio/core/CMa
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/tracedump.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/tracedump.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/tracedump.dir/rule
@@ -3579,7 +3326,7 @@ deps/dynamorio/api/samples/CMakeFiles/stl_test.dir/all: deps/dynamorio/core/CMak
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/stl_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/stl_test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/stl_test.dir/rule
@@ -3609,7 +3356,7 @@ deps/dynamorio/api/samples/CMakeFiles/cbr.dir/all: deps/dynamorio/ext/drmgr/CMak
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/cbr.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/cbr.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/cbr.dir/rule
@@ -3634,12 +3381,12 @@ deps/dynamorio/api/samples/CMakeFiles/signal.dir/all: deps/dynamorio/ext/drconta
 deps/dynamorio/api/samples/CMakeFiles/signal.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/signal.dir/build.make deps/dynamorio/api/samples/CMakeFiles/signal.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/signal.dir/build.make deps/dynamorio/api/samples/CMakeFiles/signal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=98 "Built target signal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target signal"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/signal.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/signal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/signal.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/signal.dir/rule
@@ -3666,12 +3413,12 @@ deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/all: deps/dynamorio/ex
 deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/build.make deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/build.make deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target instrace_simple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=72 "Built target instrace_simple"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/instrace_simple.dir/rule
@@ -3697,12 +3444,12 @@ deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/all: deps/dynamorio/ext/drmgr/
 deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/build.make deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/build.make deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target inc2add"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=71 "Built target inc2add"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/inc2add.dir/rule
@@ -3733,7 +3480,7 @@ deps/dynamorio/api/samples/CMakeFiles/wrap.dir/all: deps/dynamorio/ext/drwrap/CM
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/wrap.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/wrap.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/wrap.dir/rule
@@ -3761,12 +3508,12 @@ deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/all: deps/dynamorio/ext/
 deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/all: deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/build.make deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/build.make deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target memval_simple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=75 "Built target memval_simple"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/memval_simple.dir/rule
@@ -3796,7 +3543,7 @@ deps/dynamorio/api/samples/CMakeFiles/div.dir/all: deps/dynamorio/ext/drmgr/CMak
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/div.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/div.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/div.dir/rule
@@ -3827,7 +3574,7 @@ deps/dynamorio/api/samples/CMakeFiles/countcalls.dir/all: deps/dynamorio/ext/drr
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/countcalls.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/countcalls.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/countcalls.dir/rule
@@ -3854,12 +3601,12 @@ deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/all: deps/dynamorio/ext/drx/CM
 deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/build.make deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/build.make deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=79 "Built target opcodes"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=78 "Built target opcodes"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/opcodes.dir/rule
@@ -3887,12 +3634,12 @@ deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/all: deps/dynamorio/ext/drr
 deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/all: deps/dynamorio/ext/drsyms/CMakeFiles/drsyms.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/build.make deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/build.make deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=70 "Built target instrcalls"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target instrcalls"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/instrcalls.dir/rule
@@ -3925,7 +3672,7 @@ deps/dynamorio/api/samples/CMakeFiles/callstack.dir/all: deps/dynamorio/ext/drca
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/callstack.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/callstack.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/callstack.dir/rule
@@ -3958,7 +3705,7 @@ deps/dynamorio/api/samples/CMakeFiles/hot_bbcount.dir/all: deps/dynamorio/ext/dr
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/hot_bbcount.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/hot_bbcount.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/hot_bbcount.dir/rule
@@ -3988,7 +3735,7 @@ deps/dynamorio/api/samples/CMakeFiles/prefetch.dir/all: deps/dynamorio/ext/drmgr
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/prefetch.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/prefetch.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/prefetch.dir/rule
@@ -4020,7 +3767,7 @@ deps/dynamorio/api/samples/CMakeFiles/opcode_count.dir/all: deps/dynamorio/ext/d
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/opcode_count.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/opcode_count.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/opcode_count.dir/rule
@@ -4052,7 +3799,7 @@ deps/dynamorio/api/samples/CMakeFiles/bbcount.dir/all: deps/dynamorio/ext/drreg/
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/bbcount.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/bbcount.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/bbcount.dir/rule
@@ -4084,7 +3831,7 @@ deps/dynamorio/api/samples/CMakeFiles/modxfer.dir/all: deps/dynamorio/ext/drreg/
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/modxfer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/modxfer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/modxfer.dir/rule
@@ -4112,7 +3859,7 @@ deps/dynamorio/api/samples/CMakeFiles/empty.dir/all: deps/dynamorio/core/CMakeFi
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/empty.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/empty.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/empty.dir/rule
@@ -4142,7 +3889,7 @@ deps/dynamorio/api/samples/CMakeFiles/inscount.dir/all: deps/dynamorio/ext/drmgr
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/inscount.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/inscount.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/inscount.dir/rule
@@ -4167,12 +3914,12 @@ deps/dynamorio/api/samples/CMakeFiles/inline.dir/all: deps/dynamorio/ext/drconta
 deps/dynamorio/api/samples/CMakeFiles/inline.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/inline.dir/build.make deps/dynamorio/api/samples/CMakeFiles/inline.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/inline.dir/build.make deps/dynamorio/api/samples/CMakeFiles/inline.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=68 "Built target inline"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target inline"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/inline.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/inline.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/inline.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/inline.dir/rule
@@ -4200,12 +3947,12 @@ deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/all: deps/dynamorio/ex
 deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/all: deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/build.make deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/build.make deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=75 "Built target memtrace_simple"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=74 "Built target memtrace_simple"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/memtrace_simple.dir/rule
@@ -4232,12 +3979,12 @@ deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/all: deps/dynamori
 deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/build.make deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/build.make deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=69 "Built target instrace_x86_binary"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target instrace_x86_binary"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/instrace_x86_binary.dir/rule
@@ -4269,7 +4016,7 @@ deps/dynamorio/api/samples/CMakeFiles/bbsize.dir/all: deps/dynamorio/ext/drreg/C
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/bbsize.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/bbsize.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/bbsize.dir/rule
@@ -4302,7 +4049,7 @@ deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_binary.dir/all: deps/dynamori
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_binary.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_binary.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_binary.dir/rule
@@ -4329,12 +4076,12 @@ deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/all: deps/dynamorio/
 deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/all: deps/dynamorio/ext/drreg/CMakeFiles/drreg.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/build.make deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/build.make deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target instrace_x86_text"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=73 "Built target instrace_x86_text"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/instrace_x86_text.dir/rule
@@ -4366,7 +4113,7 @@ deps/dynamorio/api/samples/CMakeFiles/bbbuf.dir/all: deps/dynamorio/ext/drreg/CM
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/bbbuf.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/bbbuf.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/bbbuf.dir/rule
@@ -4392,12 +4139,12 @@ deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/all: deps/dynamorio/ext/drmgr/
 deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/all: deps/dynamorio/ext/drwrap/CMakeFiles/drwrap.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/build.make deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/build.make deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target ssljack"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=98 "Built target ssljack"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 16
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/ssljack.dir/rule
@@ -4422,12 +4169,12 @@ deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/all: deps/dynamorio/ex
 deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/all: deps/dynamorio/ext/drmgr/CMakeFiles/drmgr.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/build.make deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/build.make deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=78 "Built target modxfer_app2lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=77 "Built target modxfer_app2lib"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/modxfer_app2lib.dir/rule
@@ -4455,12 +4202,12 @@ deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/all: deps/dynamorio/
 deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/all: deps/dynamorio/ext/drutil/CMakeFiles/drutil.dir/all
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/build.make deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/depend
 	$(MAKE) -f deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/build.make deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=76 "Built target memtrace_x86_text"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num= "Built target memtrace_x86_text"
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/all
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/memtrace_x86_text.dir/rule
@@ -4492,7 +4239,7 @@ deps/dynamorio/api/samples/CMakeFiles/cbrtrace.dir/all: deps/dynamorio/ext/drreg
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/cbrtrace.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/cbrtrace.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/cbrtrace.dir/rule
@@ -4522,7 +4269,7 @@ deps/dynamorio/api/samples/CMakeFiles/syscall.dir/all: deps/dynamorio/ext/drmgr/
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/syscall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 15
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/syscall.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/syscall.dir/rule
@@ -4554,7 +4301,7 @@ deps/dynamorio/api/samples/CMakeFiles/statecmp.dir/all: deps/dynamorio/ext/drsta
 
 # Build rule for subdir invocation for target.
 deps/dynamorio/api/samples/CMakeFiles/statecmp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 14
 	$(MAKE) -f CMakeFiles/Makefile2 deps/dynamorio/api/samples/CMakeFiles/statecmp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/seop/scarab/src/build/opt/CMakeFiles 0
 .PHONY : deps/dynamorio/api/samples/CMakeFiles/statecmp.dir/rule
@@ -4576,7 +4323,7 @@ deps/dynamorio/api/samples/CMakeFiles/statecmp.dir/clean:
 ramulator/CMakeFiles/ramulator.dir/all:
 	$(MAKE) -f ramulator/CMakeFiles/ramulator.dir/build.make ramulator/CMakeFiles/ramulator.dir/depend
 	$(MAKE) -f ramulator/CMakeFiles/ramulator.dir/build.make ramulator/CMakeFiles/ramulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=82,83,84 "Built target ramulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=81,82,83 "Built target ramulator"
 .PHONY : ramulator/CMakeFiles/ramulator.dir/all
 
 # Build rule for subdir invocation for target.
@@ -4603,7 +4350,7 @@ ramulator/CMakeFiles/ramulator.dir/clean:
 pin/pin_lib/CMakeFiles/pin_lib_for_scarab.dir/all:
 	$(MAKE) -f pin/pin_lib/CMakeFiles/pin_lib_for_scarab.dir/build.make pin/pin_lib/CMakeFiles/pin_lib_for_scarab.dir/depend
 	$(MAKE) -f pin/pin_lib/CMakeFiles/pin_lib_for_scarab.dir/build.make pin/pin_lib/CMakeFiles/pin_lib_for_scarab.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=80 "Built target pin_lib_for_scarab"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/seop/scarab/src/build/opt/CMakeFiles --progress-num=79 "Built target pin_lib_for_scarab"
 .PHONY : pin/pin_lib/CMakeFiles/pin_lib_for_scarab.dir/all
 
 # Build rule for subdir invocation for target.

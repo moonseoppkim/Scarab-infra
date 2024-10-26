@@ -20,7 +20,6 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_CXX
-  "BUILD_PT_POST_PROCESSOR"
   "BUILD_PT_TRACER"
   "DR_HOST_X64"
   "DR_HOST_X86"
@@ -55,18 +54,12 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/seop/scarab/src/build/opt/deps/dynamorio/clients/drcachesim/CMakeFiles/directory_iterator.dir/DependInfo.cmake"
   "/home/seop/scarab/src/build/opt/deps/dynamorio/libutil/CMakeFiles/drfrontendlib.dir/DependInfo.cmake"
   "/home/seop/scarab/src/build/opt/deps/dynamorio/ext/drutil/CMakeFiles/drutil_static.dir/DependInfo.cmake"
-  "/home/seop/scarab/src/build/opt/deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/DependInfo.cmake"
-  "/home/seop/scarab/src/build/opt/deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/DependInfo.cmake"
   "/home/seop/scarab/src/build/opt/deps/dynamorio/clients/drcachesim/CMakeFiles/minizip.dir/DependInfo.cmake"
+  "/home/seop/scarab/src/build/opt/deps/dynamorio/core/CMakeFiles/drlibc.dir/DependInfo.cmake"
   "/home/seop/scarab/src/build/opt/deps/dynamorio/core/CMakeFiles/drmemfuncs.dir/DependInfo.cmake"
   "/home/seop/scarab/src/build/opt/deps/dynamorio/ext/drmgr/CMakeFiles/drmgr_static.dir/DependInfo.cmake"
   "/home/seop/scarab/src/build/opt/deps/dynamorio/ext/drcontainers/CMakeFiles/drcontainers.dir/DependInfo.cmake"
   "/home/seop/scarab/src/build/opt/deps/dynamorio/core/CMakeFiles/dynamorio.dir/DependInfo.cmake"
-  "/home/seop/scarab/src/build/opt/deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/DependInfo.cmake"
-  "/home/seop/scarab/src/build/opt/deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/DependInfo.cmake"
-  "/home/seop/scarab/src/build/opt/deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/DependInfo.cmake"
-  "/home/seop/scarab/src/build/opt/deps/dynamorio/core/CMakeFiles/drdecode.dir/DependInfo.cmake"
-  "/home/seop/scarab/src/build/opt/deps/dynamorio/core/CMakeFiles/drlibc.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

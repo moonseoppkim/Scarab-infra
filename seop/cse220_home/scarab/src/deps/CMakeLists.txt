@@ -1,15 +1,3 @@
-find_package(Git)
-if(GIT_FOUND)
-    execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --init --recursive
-                    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}/..
-                    RESULT_VARIABLE GIT_SUBMOD_RESULT)
-    if(NOT GIT_SUBMOD_RESULT EQUAL "0")
-        message(FATAL_ERROR "Updating git submodules failed: ${GIT_SUBMOD_RESULT}")
-    endif()
-else()
-  message(FATAL_ERROR "Could not find git binary in the system")
-endif()
-
 find_package(Python3)
 if(Python3_FOUND)
     execute_process(

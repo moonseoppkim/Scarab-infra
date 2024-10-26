@@ -506,7 +506,7 @@ drmemtrace_invariant_checker_LIB_DEPENDS:STATIC=general;drdecode;
 drmemtrace_opcode_mix_LIB_DEPENDS:STATIC=general;dynamorio;
 
 //Dependencies for the target
-drmemtrace_raw2trace_LIB_DEPENDS:STATIC=general;dynamorio;general;directory_iterator;general;drfrontendlib;general;drutil_static;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;snappy;general;lz4;general;drpt2ir;general;drir2trace;general;/usr/lib/x86_64-linux-gnu/libz.so;general;minizip;
+drmemtrace_raw2trace_LIB_DEPENDS:STATIC=general;dynamorio;general;directory_iterator;general;drfrontendlib;general;drutil_static;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;snappy;general;lz4;general;/usr/lib/x86_64-linux-gnu/libz.so;general;minizip;
 
 //Dependencies for the target
 drmemtrace_record_filter_LIB_DEPENDS:STATIC=general;drmemtrace_simulator;
@@ -815,7 +815,7 @@ CMAKE_MODULE_LINKER_FLAGS_SCARABOPT-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=34
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=32
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

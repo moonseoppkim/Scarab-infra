@@ -91,7 +91,7 @@ var page_user_docs =
       [ "DynamoRIO Shared Library Issues", "page_standalone.html#sec_standalone_shared", null ]
     ] ],
     [ "DynamoRIO System Overview", "overview.html", "overview" ],
-    [ "Release Notes for Version 10.0.19656", "release_notes.html", [
+    [ "Release Notes for Version 10.0.0", "release_notes.html", [
       [ "Distribution Contents", "release_notes.html#sec_package", null ],
       [ "Changes Since Prior Releases", "release_notes.html#sec_changes", null ],
       [ "Limitations", "release_notes.html#sec_limits", [
