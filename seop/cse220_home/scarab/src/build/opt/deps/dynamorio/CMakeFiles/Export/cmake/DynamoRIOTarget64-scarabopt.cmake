@@ -215,56 +215,6 @@ set_target_properties(directory_iterator PROPERTIES
 list(APPEND _IMPORT_CHECK_TARGETS directory_iterator )
 list(APPEND _IMPORT_CHECK_FILES_FOR_directory_iterator "${_IMPORT_PREFIX}/tools/lib64/release/libdirectory_iterator.a" )
 
-# Import target "ipt" for configuration "ScarabOpt"
-set_property(TARGET ipt APPEND PROPERTY IMPORTED_CONFIGURATIONS SCARABOPT)
-set_target_properties(ipt PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_SCARABOPT "C"
-  IMPORTED_LOCATION_SCARABOPT "${_IMPORT_PREFIX}/tools/lib64/release/libipt.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ipt )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ipt "${_IMPORT_PREFIX}/tools/lib64/release/libipt.a" )
-
-# Import target "pevent" for configuration "ScarabOpt"
-set_property(TARGET pevent APPEND PROPERTY IMPORTED_CONFIGURATIONS SCARABOPT)
-set_target_properties(pevent PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_SCARABOPT "C"
-  IMPORTED_LOCATION_SCARABOPT "${_IMPORT_PREFIX}/tools/lib64/release/libpevent.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS pevent )
-list(APPEND _IMPORT_CHECK_FILES_FOR_pevent "${_IMPORT_PREFIX}/tools/lib64/release/libpevent.a" )
-
-# Import target "ipt-sb" for configuration "ScarabOpt"
-set_property(TARGET ipt-sb APPEND PROPERTY IMPORTED_CONFIGURATIONS SCARABOPT)
-set_target_properties(ipt-sb PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_SCARABOPT "C"
-  IMPORTED_LOCATION_SCARABOPT "${_IMPORT_PREFIX}/tools/lib64/release/libipt-sb.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS ipt-sb )
-list(APPEND _IMPORT_CHECK_FILES_FOR_ipt-sb "${_IMPORT_PREFIX}/tools/lib64/release/libipt-sb.a" )
-
-# Import target "drpt2ir" for configuration "ScarabOpt"
-set_property(TARGET drpt2ir APPEND PROPERTY IMPORTED_CONFIGURATIONS SCARABOPT)
-set_target_properties(drpt2ir PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_SCARABOPT "CXX"
-  IMPORTED_LOCATION_SCARABOPT "${_IMPORT_PREFIX}/tools/lib64/release/libdrpt2ir.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS drpt2ir )
-list(APPEND _IMPORT_CHECK_FILES_FOR_drpt2ir "${_IMPORT_PREFIX}/tools/lib64/release/libdrpt2ir.a" )
-
-# Import target "drir2trace" for configuration "ScarabOpt"
-set_property(TARGET drir2trace APPEND PROPERTY IMPORTED_CONFIGURATIONS SCARABOPT)
-set_target_properties(drir2trace PROPERTIES
-  IMPORTED_LINK_INTERFACE_LANGUAGES_SCARABOPT "CXX"
-  IMPORTED_LOCATION_SCARABOPT "${_IMPORT_PREFIX}/tools/lib64/release/libdrir2trace.a"
-  )
-
-list(APPEND _IMPORT_CHECK_TARGETS drir2trace )
-list(APPEND _IMPORT_CHECK_FILES_FOR_drir2trace "${_IMPORT_PREFIX}/tools/lib64/release/libdrir2trace.a" )
-
 # Import target "drmemtrace_raw2trace" for configuration "ScarabOpt"
 set_property(TARGET drmemtrace_raw2trace APPEND PROPERTY IMPORTED_CONFIGURATIONS SCARABOPT)
 set_target_properties(drmemtrace_raw2trace PROPERTIES

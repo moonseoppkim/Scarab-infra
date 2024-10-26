@@ -401,11 +401,6 @@ deps/dynamorio/clients/bin64/drcachesim: /usr/lib/x86_64-linux-gnu/libz.so
 deps/dynamorio/clients/bin64/drcachesim: deps/dynamorio/clients/lib64/release/libminizip.a
 deps/dynamorio/clients/bin64/drcachesim: /usr/lib/x86_64-linux-gnu/libpthread.so
 deps/dynamorio/clients/bin64/drcachesim: /usr/lib/x86_64-linux-gnu/libz.so
-deps/dynamorio/clients/bin64/drcachesim: deps/dynamorio/clients/lib64/release/libdrpt2ir.a
-deps/dynamorio/clients/bin64/drcachesim: deps/dynamorio/third_party/lib64/release/libipt-sb.a
-deps/dynamorio/clients/bin64/drcachesim: deps/dynamorio/third_party/lib64/release/libipt.a
-deps/dynamorio/clients/bin64/drcachesim: deps/dynamorio/third_party/lib64/release/libpevent.a
-deps/dynamorio/clients/bin64/drcachesim: deps/dynamorio/clients/lib64/release/libdrir2trace.a
 deps/dynamorio/clients/bin64/drcachesim: deps/dynamorio/lib64/libdrdecode.a
 deps/dynamorio/clients/bin64/drcachesim: deps/dynamorio/lib64/libdrlibc.a
 deps/dynamorio/clients/bin64/drcachesim: deps/dynamorio/lib64/libdrmemfuncs.a

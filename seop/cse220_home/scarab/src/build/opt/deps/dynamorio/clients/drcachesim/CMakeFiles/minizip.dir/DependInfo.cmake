@@ -15,7 +15,6 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
 set(CMAKE_TARGET_DEFINITIONS_C
-  "BUILD_PT_POST_PROCESSOR"
   "BUILD_PT_TRACER"
   "HAS_LZ4"
   "HAS_SNAPPY"

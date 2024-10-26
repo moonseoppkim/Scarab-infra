@@ -777,84 +777,6 @@ drcachesim_docs/fast:
 .PHONY : drcachesim_docs/fast
 
 #=============================================================================
-# Target rules for targets named drpt2trace
-
-# Build rule for target.
-drpt2trace: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 drpt2trace
-.PHONY : drpt2trace
-
-# fast build rule for target.
-drpt2trace/fast:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2trace.dir/build
-.PHONY : drpt2trace/fast
-
-#=============================================================================
-# Target rules for targets named drir2trace
-
-# Build rule for target.
-drir2trace: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 drir2trace
-.PHONY : drir2trace
-
-# fast build rule for target.
-drir2trace/fast:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drir2trace.dir/build
-.PHONY : drir2trace/fast
-
-#=============================================================================
-# Target rules for targets named drpt2ir
-
-# Build rule for target.
-drpt2ir: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 drpt2ir
-.PHONY : drpt2ir
-
-# fast build rule for target.
-drpt2ir/fast:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/CMakeFiles/drpt2ir.dir/build
-.PHONY : drpt2ir/fast
-
-#=============================================================================
-# Target rules for targets named ipt-sb
-
-# Build rule for target.
-ipt-sb: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ipt-sb
-.PHONY : ipt-sb
-
-# fast build rule for target.
-ipt-sb/fast:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt-sb.dir/build
-.PHONY : ipt-sb/fast
-
-#=============================================================================
-# Target rules for targets named pevent
-
-# Build rule for target.
-pevent: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pevent
-.PHONY : pevent
-
-# fast build rule for target.
-pevent/fast:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/pevent.dir/build
-.PHONY : pevent/fast
-
-#=============================================================================
-# Target rules for targets named ipt
-
-# Build rule for target.
-ipt: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ipt
-.PHONY : ipt
-
-# fast build rule for target.
-ipt/fast:
-	$(MAKE) -f deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/build.make deps/dynamorio/clients/drcachesim/drpt2trace/libipt/CMakeFiles/ipt.dir/build
-.PHONY : ipt/fast
-
-#=============================================================================
 # Target rules for targets named drcov_docs
 
 # Build rule for target.
@@ -4066,12 +3988,6 @@ help:
 	@echo "... drraw2trace"
 	@echo "... prefetch_analyzer_launcher"
 	@echo "... drcachesim_docs"
-	@echo "... drpt2trace"
-	@echo "... drir2trace"
-	@echo "... drpt2ir"
-	@echo "... ipt-sb"
-	@echo "... pevent"
-	@echo "... ipt"
 	@echo "... drcov_docs"
 	@echo "... drcov2lcov"
 	@echo "... drcov"

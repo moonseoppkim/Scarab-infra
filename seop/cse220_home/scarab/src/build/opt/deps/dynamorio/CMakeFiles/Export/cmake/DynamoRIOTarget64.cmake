@@ -16,7 +16,7 @@ set(CMAKE_IMPORT_FILE_VERSION 1)
 set(_targetsDefined)
 set(_targetsNotDefined)
 set(_expectedTargets)
-foreach(_expectedTarget dynamorio dynamorio_static drinjectlib drdecode drlibc drmemfuncs drconfiglib drfrontendlib minizip drmemtrace_reuse_distance drmemtrace_histogram drmemtrace_reuse_time drmemtrace_basic_counts drmemtrace_opcode_mix drmemtrace_syscall_mix drmemtrace_view drmemtrace_func_view drmemtrace_invariant_checker drmemtrace_simulator drmemtrace_record_filter directory_iterator ipt pevent ipt-sb drpt2ir drir2trace drmemtrace_raw2trace drmemtrace_analyzer drcontainers drmgr drmgr_static drx drx_static drwrap drwrap_static drreg drreg_static drbbdup drbbdup_static drsyms drsyms_static drutil drutil_static drcovlib drcovlib_static drstatecmp drstatecmp_static drpttracer drpttracer_static drcallstack drcallstack_static)
+foreach(_expectedTarget dynamorio dynamorio_static drinjectlib drdecode drlibc drmemfuncs drconfiglib drfrontendlib minizip drmemtrace_reuse_distance drmemtrace_histogram drmemtrace_reuse_time drmemtrace_basic_counts drmemtrace_opcode_mix drmemtrace_syscall_mix drmemtrace_view drmemtrace_func_view drmemtrace_invariant_checker drmemtrace_simulator drmemtrace_record_filter directory_iterator drmemtrace_raw2trace drmemtrace_analyzer drcontainers drmgr drmgr_static drx drx_static drwrap drwrap_static drreg drreg_static drbbdup drbbdup_static drsyms drsyms_static drutil drutil_static drcovlib drcovlib_static drstatecmp drstatecmp_static drpttracer drpttracer_static drcallstack drcallstack_static)
   list(APPEND _expectedTargets ${_expectedTarget})
   if(NOT TARGET ${_expectedTarget})
     list(APPEND _targetsNotDefined ${_expectedTarget})
@@ -151,38 +151,11 @@ set_target_properties(directory_iterator PROPERTIES
   INTERFACE_LINK_LIBRARIES "drfrontendlib"
 )
 
-# Create imported target ipt
-add_library(ipt STATIC IMPORTED)
-
-# Create imported target pevent
-add_library(pevent STATIC IMPORTED)
-
-# Create imported target ipt-sb
-add_library(ipt-sb STATIC IMPORTED)
-
-set_target_properties(ipt-sb PROPERTIES
-  INTERFACE_LINK_LIBRARIES "ipt;pevent"
-)
-
-# Create imported target drpt2ir
-add_library(drpt2ir STATIC IMPORTED)
-
-set_target_properties(drpt2ir PROPERTIES
-  INTERFACE_LINK_LIBRARIES "drdecode;ipt;ipt-sb"
-)
-
-# Create imported target drir2trace
-add_library(drir2trace STATIC IMPORTED)
-
-set_target_properties(drir2trace PROPERTIES
-  INTERFACE_LINK_LIBRARIES "drdecode"
-)
-
 # Create imported target drmemtrace_raw2trace
 add_library(drmemtrace_raw2trace STATIC IMPORTED)
 
 set_target_properties(drmemtrace_raw2trace PROPERTIES
-  INTERFACE_LINK_LIBRARIES "dynamorio;directory_iterator;drfrontendlib;drutil_static;/usr/lib/x86_64-linux-gnu/libpthread.so;snappy;lz4;drpt2ir;drir2trace;/usr/lib/x86_64-linux-gnu/libz.so;minizip"
+  INTERFACE_LINK_LIBRARIES "dynamorio;directory_iterator;drfrontendlib;drutil_static;/usr/lib/x86_64-linux-gnu/libpthread.so;snappy;lz4;/usr/lib/x86_64-linux-gnu/libz.so;minizip"
 )
 
 # Create imported target drmemtrace_analyzer

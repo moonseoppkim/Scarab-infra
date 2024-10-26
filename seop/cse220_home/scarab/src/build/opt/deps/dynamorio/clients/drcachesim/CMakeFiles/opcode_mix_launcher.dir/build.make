@@ -93,12 +93,6 @@ deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/lib64/libdrmemf
 deps/dynamorio/clients/bin64/opcode_mix_launcher: /usr/lib/x86_64-linux-gnu/libpthread.so
 deps/dynamorio/clients/bin64/opcode_mix_launcher: /usr/lib/x86_64-linux-gnu/libz.so
 deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/ext/lib64/release/libdrutil_static.a
-deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/clients/lib64/release/libdrpt2ir.a
-deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/third_party/lib64/release/libipt-sb.a
-deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/third_party/lib64/release/libipt.a
-deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/third_party/lib64/release/libpevent.a
-deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/clients/lib64/release/libdrir2trace.a
-deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/lib64/libdrdecode.a
 deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/ext/lib64/release/libdrx_static.a
 deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/ext/lib64/release/libdrreg_static.a
 deps/dynamorio/clients/bin64/opcode_mix_launcher: deps/dynamorio/ext/lib64/release/libdrmgr_static.a

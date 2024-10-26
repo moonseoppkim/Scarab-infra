@@ -1328,12 +1328,6 @@ scarab: ramulator/libramulator.a
 scarab: pin/pin_lib/libpin_lib_for_scarab.a
 scarab: ../../deps/xed/obj/libxed.a
 scarab: deps/dynamorio/clients/lib64/release/libdrmemtrace_raw2trace.a
-scarab: deps/dynamorio/clients/lib64/release/libdrpt2ir.a
-scarab: deps/dynamorio/third_party/lib64/release/libipt-sb.a
-scarab: deps/dynamorio/third_party/lib64/release/libipt.a
-scarab: deps/dynamorio/third_party/lib64/release/libpevent.a
-scarab: deps/dynamorio/clients/lib64/release/libdrir2trace.a
-scarab: deps/dynamorio/lib64/libdrdecode.a
 scarab: deps/dynamorio/ext/lib64/release/libdrutil_static.a
 scarab: deps/dynamorio/ext/lib64/release/libdrcovlib_static.a
 scarab: deps/dynamorio/ext/lib64/release/libdrx_static.a
