@@ -4,6 +4,8 @@ SRCPWD = $(shell pwd)
 
 BUILD_DIR_PREFIX = build
 
+CFLAGS += -g
+
 # origin checks to see where the value of CC came from.
 # If it is still set to the default, then over write it with a new default.
 # This must be done for variables like CC for which the Makefile

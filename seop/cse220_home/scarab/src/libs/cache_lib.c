@@ -226,6 +226,10 @@ void* cache_access(Cache* cache, Addr addr, Addr* line_addr, Flag update_repl) {
   uns  ii;
   void* line_data = NULL;
 
+  cache->is_compulsory_miss = FALSE; 
+  cache->is_conflict_miss = FALSE;
+  cache->is_capacity_miss = FALSE;
+
   if (cache->repl_policy >= REPL_VOID)
     return cache_access_strategy(cache, addr, line_addr, update_repl);
 
@@ -270,10 +274,6 @@ void* cache_access(Cache* cache, Addr addr, Addr* line_addr, Flag update_repl) {
           set, hexstr64s(addr));
     return access_shadow_lines(cache, set, tag);
   }
-  
-  cache->is_compulsory_miss = FALSE; 
-  cache->is_conflict_miss = FALSE;
-  cache->is_capacity_miss = FALSE;
 
   if(strcmp(cache->name, "DCACHE") == 0 || strcmp(cache->name, "FA_DCACHE") == 0) {
     Flag new_entry = FALSE;
