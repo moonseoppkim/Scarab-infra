@@ -190,6 +190,7 @@ const static Flag CACHE_DEBUG_ENABLE = FALSE; // To be Changed into DEBUG_PARA
 /* prototypes */
 
 void  init_cache(Cache*, const char*, uns, uns, uns, uns, Repl_Policy);
+void  cache_miss_type_check(Cache* cache, Addr line_addr);
 void* cache_access(Cache*, Addr, Addr*, Flag);
 void* cache_insert(Cache*, uns8, Addr, Addr*, Addr*);
 void* cache_insert_replpos(Cache* cache, uns8 proc_id, Addr addr,

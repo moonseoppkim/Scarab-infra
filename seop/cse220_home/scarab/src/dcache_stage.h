@@ -93,6 +93,7 @@ void init_dcache_stage(uns8, const char*);
 void reset_dcache_stage(void);
 void recover_dcache_stage(void);
 void debug_dcache_stage(void);
+void log_dcache_miss_type(Op* op, Cache* dcache, Cache* fa_dcache, Flag is_store);
 void update_dcache_stage(Stage_Data*);
 void cmp_update_dcache_stage(Stage_Data*, uns);
 void wp_process_dcache_hit(Dcache_Data* line, Op* op);

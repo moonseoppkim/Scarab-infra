@@ -216,6 +216,27 @@ void init_cache(Cache* cache, const char* name, uns cache_size, uns assoc,
   init_hash_table(&cache->accessed_blocks, "Accessed Blocks", NODE_TABLE_SIZE, sizeof(Flag));
 }
 
+void cache_miss_type_check(Cache* cache, Addr line_addr) {
+    Flag new_entry = FALSE;
+    hash_table_access_create(&cache->accessed_blocks, line_addr - (line_addr % cache->line_size), &new_entry);
+
+    if (new_entry) {
+        cache->is_compulsory_miss = TRUE;
+        cache->is_conflict_miss = FALSE;
+        cache->is_capacity_miss = FALSE;
+    } else {
+        if (strcmp(cache->name, "DCACHE") == 0) {
+            cache->is_compulsory_miss = FALSE;
+            cache->is_conflict_miss = TRUE;
+            cache->is_capacity_miss = FALSE;
+        } else if (strcmp(cache->name, "FA_DCACHE") == 0) {
+            cache->is_compulsory_miss = FALSE;
+            cache->is_conflict_miss = FALSE;
+            cache->is_capacity_miss = TRUE;
+        }
+    }
+}
+
 /**************************************************************************************/
 /* cache_access: Does a cache lookup based on the address.  Returns a pointer
  * to the cache line data if it is found.  */
@@ -276,24 +297,7 @@ void* cache_access(Cache* cache, Addr addr, Addr* line_addr, Flag update_repl) {
   }
 
   if(strcmp(cache->name, "DCACHE") == 0 || strcmp(cache->name, "FA_DCACHE") == 0) {
-    Flag new_entry = FALSE;
-    hash_table_access_create(&cache->accessed_blocks, *line_addr - (*line_addr % cache->line_size), &new_entry);
-
-    if (new_entry) {
-        cache->is_compulsory_miss = TRUE;
-        cache->is_conflict_miss = FALSE;
-        cache->is_capacity_miss = FALSE;
-    } else {
-      if(strcmp(cache->name, "DCACHE") == 0) {
-        cache->is_compulsory_miss = FALSE;
-        cache->is_conflict_miss = TRUE;
-        cache->is_capacity_miss = FALSE;
-      } else if(strcmp(cache->name, "FA_DCACHE") == 0) {
-        cache->is_compulsory_miss = FALSE;
-        cache->is_conflict_miss = FALSE;
-        cache->is_capacity_miss = TRUE;
-      }
-    }
+    cache_miss_type_check(cache, *line_addr);
   }
 
   DEBUG(0, "Didn't find line in set %u in cache '%s' base 0x%s\n", set,

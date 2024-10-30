@@ -156,6 +156,26 @@ void debug_dcache_stage() {
                  STAGE_MAX_OP_COUNT);
 }
 
+void log_dcache_miss_type(Op* op, Cache* dcache, Cache* fa_dcache, Flag is_store) {
+    if (dcache->is_compulsory_miss) {
+        STAT_EVENT(op->proc_id, is_store ? DCACHE_MISS_COMPULSORY_STORE : DCACHE_MISS_COMPULSORY_LOAD);
+    } else {
+        // Determine miss type based on conflict and capacity miss flags
+        if (fa_dcache->is_capacity_miss == TRUE) {
+            dcache->is_capacity_miss = TRUE;
+            dcache->is_conflict_miss = FALSE;
+        }
+
+        if (dcache->is_conflict_miss) {
+            STAT_EVENT(op->proc_id, is_store ? DCACHE_MISS_CONFLICT_STORE : DCACHE_MISS_CONFLICT_LOAD);
+        } else if (dcache->is_capacity_miss) {
+            STAT_EVENT(op->proc_id, is_store ? DCACHE_MISS_CAPACITY_STORE : DCACHE_MISS_CAPACITY_LOAD);
+        } else {
+            STAT_EVENT(op->proc_id, DCACHE_MISS_WEIRD);
+        }
+    }
+}
+
 /**************************************************************************************/
 /* update_dcache_stage: */
 void update_dcache_stage(Stage_Data* src_sd) {
@@ -441,23 +461,7 @@ void update_dcache_stage(Stage_Data* src_sd) {
             op->oracle_info.dcmiss = TRUE;
             STAT_EVENT(op->proc_id, DCACHE_MISS_LD);
 
-            // stat1
-            if (dc->dcache.is_compulsory_miss) {
-              STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_LOAD);
-            } else {
-              if (dc->fa_dcache.is_capacity_miss == TRUE) {
-                dc->dcache.is_capacity_miss = TRUE;
-                dc->dcache.is_conflict_miss = FALSE;
-              }
-
-              if (dc->dcache.is_conflict_miss) {
-                STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_LOAD);
-              } else if (dc->dcache.is_capacity_miss) {
-                STAT_EVENT(op->proc_id, DCACHE_MISS_CAPACITY_LOAD);
-              } else {
-                STAT_EVENT(op->proc_id, DCACHE_MISS_WEIRD);
-              }
-            }
+            log_dcache_miss_type(op, &dc->dcache, &dc->fa_dcache, op->table_info->mem_type == MEM_ST);
           } else {
             wrongpath_dcmiss = TRUE;
             STAT_EVENT(op->proc_id, DCACHE_MISS_OFFPATH);
@@ -572,23 +576,7 @@ void update_dcache_stage(Stage_Data* src_sd) {
             op->oracle_info.dcmiss = TRUE;
             STAT_EVENT(op->proc_id, DCACHE_MISS_ST);
             
-            // stat
-            if (dc->dcache.is_compulsory_miss) {
-              STAT_EVENT(op->proc_id, DCACHE_MISS_COMPULSORY_STORE);
-            } else {
-              if (dc->fa_dcache.is_capacity_miss == TRUE) {
-                dc->dcache.is_capacity_miss = TRUE;
-                dc->dcache.is_conflict_miss = FALSE;
-              }
-
-              if (dc->dcache.is_conflict_miss) {
-                STAT_EVENT(op->proc_id, DCACHE_MISS_CONFLICT_STORE);
-              } else if (dc->dcache.is_capacity_miss) {
-                STAT_EVENT(op->proc_id, DCACHE_MISS_CAPACITY_STORE);
-              } else {
-                STAT_EVENT(op->proc_id, DCACHE_MISS_WEIRD);
-              }
-            }
+            log_dcache_miss_type(op, &dc->dcache, &dc->fa_dcache, op->table_info->mem_type == MEM_ST);
           } else {
             wrongpath_dcmiss = TRUE;
             STAT_EVENT(op->proc_id, DCACHE_MISS_OFFPATH);
