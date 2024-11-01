@@ -218,7 +218,7 @@ void init_cache(Cache* cache, const char* name, uns cache_size, uns assoc,
 
 void cache_miss_type_check(Cache* cache, Addr line_addr) {
     Flag new_entry = FALSE;
-    hash_table_access_create(&cache->accessed_blocks, line_addr - (line_addr % cache->line_size), &new_entry);
+    hash_table_access_create(&cache->accessed_blocks, line_addr, &new_entry);
 
     if (new_entry) {
         cache->is_compulsory_miss = TRUE;

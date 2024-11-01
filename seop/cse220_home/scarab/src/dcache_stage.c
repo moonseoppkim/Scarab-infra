@@ -180,7 +180,6 @@ void log_dcache_miss_type(Op* op, Cache* dcache, Cache* fa_dcache, Flag is_store
 /* update_dcache_stage: */
 void update_dcache_stage(Stage_Data* src_sd) {
   Dcache_Data* line;
-  Dcache_Data* fa_line;
   Counter      oldest_op_num, last_oldest_op_num;
   uns          oldest_index;
   int          start_op_count;
@@ -309,7 +308,7 @@ void update_dcache_stage(Stage_Data* src_sd) {
       ideal_l2l1_prefetcher(op);
 
     /* now access the dcache with it */
-    fa_line = (Dcache_Data*)cache_access(&dc->fa_dcache, op->oracle_info.va,
+    (Dcache_Data*)cache_access(&dc->fa_dcache, op->oracle_info.va,
                                       &fa_line_addr, TRUE);
 
     line = (Dcache_Data*)cache_access(&dc->dcache, op->oracle_info.va,
@@ -625,6 +624,7 @@ Flag dcache_fill_line(Mem_Req* req) {
   uns bank = req->addr >> dc->dcache.shift_bits &
              N_BIT_MASK(LOG2(DCACHE_BANKS));
   Dcache_Data* data;
+  Dcache_Data* fa_data;
   Addr         line_addr, repl_line_addr;
   Addr         fa_line_addr, fa_repl_line_addr;
   Op*          op;
@@ -671,6 +671,11 @@ Flag dcache_fill_line(Mem_Req* req) {
     Flag repl_line_valid;
     data = (Dcache_Data*)get_next_repl_line(&dc->dcache, dc->proc_id, req->addr,
                                             &repl_line_addr, &repl_line_valid);
+
+    Flag fa_repl_line_valid;
+    fa_data = (Dcache_Data*)get_next_repl_line(&dc->fa_dcache, dc->proc_id, req->addr,
+                                            &fa_repl_line_addr, &fa_repl_line_valid);
+
     if(repl_line_valid && data->dirty) {
       /* need to do a write-back */
       uns repl_proc_id = get_proc_id_from_cmp_addr(repl_line_addr);
@@ -711,8 +716,12 @@ Flag dcache_fill_line(Mem_Req* req) {
 
     data = (Dcache_Data*)cache_insert(&dc->dcache, dc->proc_id, req->addr,
                                       &line_addr, &repl_line_addr);
-    cache_insert(&dc->fa_dcache, dc->proc_id, req->addr,
-                                      &fa_line_addr, &fa_repl_line_addr);
+
+    fa_data = (Dcache_Data*)cache_access(&dc->fa_dcache, req->addr, &fa_line_addr, FALSE);
+
+    if (fa_data == NULL)
+        cache_insert(&dc->fa_dcache, dc->proc_id, req->addr, &fa_line_addr, &fa_repl_line_addr);
+
     DEBUG(dc->proc_id,
           "Filling dcache  off_path:%d addr:0x%s  :%7d index:%7d op_count:%d "
           "oldest:%lld\n",
