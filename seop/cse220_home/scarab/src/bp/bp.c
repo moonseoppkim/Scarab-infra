@@ -40,6 +40,7 @@
 #include "bp/bp_targ_mech.h"
 #include "bp/cbp_to_scarab.h"
 #include "bp/gshare.h"
+#include "bp/bimodal.h"
 #include "bp/hybridgp.h"
 #include "bp/tagescl.h"
 #include "libs/cache_lib.h"
@@ -931,6 +932,9 @@ Addr bp_predict_op_evaluate(Bp_Data* bp_data, Op *op, Addr prediction) {
   STAT_EVENT(op->proc_id,
              LATE_BP_ON_PATH_CORRECT + op->oracle_info.late_mispred +
                2 * op->oracle_info.late_misfetch + 3 * op->off_path);
+
+  //DPRINTF("SEOP : BP_MECH : %d", BP_MECH);
+  //ASSERT(0, 0);
 
   if(!op->off_path) {
     if(op->oracle_info.mispred)

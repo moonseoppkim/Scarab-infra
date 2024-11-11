@@ -38,6 +38,7 @@ Bp bp_table [] = {
     { CBP_CLASS ## _BP,    CBP_NAME,   SCARAB_BP_INTF_FUNC(CBP_CLASS, init), SCARAB_BP_INTF_FUNC(CBP_CLASS, timestamp), SCARAB_BP_INTF_FUNC(CBP_CLASS, pred), SCARAB_BP_INTF_FUNC(CBP_CLASS, spec_update), SCARAB_BP_INTF_FUNC(CBP_CLASS, update), SCARAB_BP_INTF_FUNC(CBP_CLASS, retire), SCARAB_BP_INTF_FUNC(CBP_CLASS, recover), SCARAB_BP_INTF_FUNC(CBP_CLASS, full)}, 
 #include "cbp_table.def"
 #undef DEF_CBP
+    { BIMODAL_BP,   "bimodal",  bp_bimodal_init,    bp_bimodal_timestamp,   bp_bimodal_pred,  bp_bimodal_spec_update,   bp_bimodal_update,   bp_bimodal_retire,   bp_bimodal_recover,   bp_bimodal_full},
     { NUM_BP,       0,          NULL,               NULL,                   NULL,             NULL,                     NULL,                NULL,                NULL,                 NULL }
     
 };
