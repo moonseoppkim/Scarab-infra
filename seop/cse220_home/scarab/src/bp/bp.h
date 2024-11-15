@@ -182,6 +182,7 @@ typedef enum Bp_Id_enum {
 #include "cbp_table.def"
 #undef DEF_CBP
   BIMODAL_BP,
+  TATP_BP,
   NUM_BP,
 } Bp_Id;
 

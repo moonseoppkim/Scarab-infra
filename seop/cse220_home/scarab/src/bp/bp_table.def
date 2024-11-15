@@ -39,6 +39,7 @@ Bp bp_table [] = {
 #include "cbp_table.def"
 #undef DEF_CBP
     { BIMODAL_BP,   "bimodal",  bp_bimodal_init,    bp_bimodal_timestamp,   bp_bimodal_pred,  bp_bimodal_spec_update,   bp_bimodal_update,   bp_bimodal_retire,   bp_bimodal_recover,   bp_bimodal_full},
+    { TATP_BP,      "tatp",     bp_tatp_init,       bp_tatp_timestamp,      bp_tatp_pred,     bp_tatp_spec_update,      bp_tatp_update,      bp_tatp_retire,      bp_tatp_recover,      bp_tatp_full },
     { NUM_BP,       0,          NULL,               NULL,                   NULL,             NULL,                     NULL,                NULL,                NULL,                 NULL }
     
 };

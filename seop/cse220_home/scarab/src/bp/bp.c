@@ -41,6 +41,7 @@
 #include "bp/cbp_to_scarab.h"
 #include "bp/gshare.h"
 #include "bp/bimodal.h"
+#include "bp/tatp.h"
 #include "bp/hybridgp.h"
 #include "bp/tagescl.h"
 #include "libs/cache_lib.h"
