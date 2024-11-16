@@ -183,6 +183,7 @@ typedef enum Bp_Id_enum {
 #undef DEF_CBP
   BIMODAL_BP,
   TATP_BP,
+  TATP_HASH_BP,
   NUM_BP,
 } Bp_Id;
 

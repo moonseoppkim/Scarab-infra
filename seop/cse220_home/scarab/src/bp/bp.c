@@ -42,6 +42,7 @@
 #include "bp/gshare.h"
 #include "bp/bimodal.h"
 #include "bp/tatp.h"
+#include "bp/tatp_hash.h"
 #include "bp/hybridgp.h"
 #include "bp/tagescl.h"
 #include "libs/cache_lib.h"

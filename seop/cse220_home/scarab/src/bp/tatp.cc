@@ -1,6 +1,7 @@
 #include "debug/debug_macros.h"
 #include "debug/debug_print.h"
 #include "globals/assert.h"
+#include "bp/bp.param.h"
 
 #include "tatp.h"
 
@@ -9,15 +10,15 @@
 #include <climits>
 
 #define AHRT_TAG_BITS 4
-#define AHRT_INDEX_BITS 8                    // parameter1
+#define AHRT_INDEX_BITS AHRT_INDEX           // parameter1
 
-#define AHRT_ENTRIES (1 << AHRT_INDEX_BITS)  // 64 entries for AHRT
+#define AHRT_ENTRIES (1 << AHRT_INDEX_BITS)  // 2^AHRT_INDEX_BITS entries for AHRT
 #define AHRT_HISTORY_BITS 12                 // paremeter2
 
 #define HPT_ENTRIES (1 << AHRT_HISTORY_BITS) // 4096 entries for HPT
 #define PHT_CTR_BITS 2                       // 2-bit pattern counter
 
-#define ASSOCIATIVITY (1 << 3)               // 4-way
+#define ASSOCIATIVITY TATP_ASSOC             // 4-way
 
 #define DEFAULT_HRT_VALUE N_BIT_MASK(AHRT_HISTORY_BITS)
 
@@ -32,11 +33,13 @@ struct AHRT_Entry {
 
 // TATP State Structure
 struct TATP_State {
-    std::array<std::vector<AHRT_Entry>, AHRT_ENTRIES> AHRT; // 64 indices, each with 4-way associative AHRT
+    std::vector<std::vector<AHRT_Entry>> AHRT; // 2^index indices, each with 4-way associative AHRT
     std::vector<uint32_t> HPT;                               // History Pattern Table
+    
+    TATP_State(int entry_count) : AHRT(entry_count), HPT() {}
 };
 
-TATP_State tatp_state;
+TATP_State tatp_state(AHRT_ENTRIES);
 
 void bp_tatp_timestamp(Op* op) {}
 void bp_tatp_recover(Recovery_Info* info) {}
@@ -45,6 +48,9 @@ void bp_tatp_retire(Op* op) {}
 uns8 bp_tatp_full(uns proc_id) { return 0; }
 
 void bp_tatp_init() {
+#if DEBUG_ON
+    DPRINTF("SEOP : AHRT_ENTRIES : %d\n", AHRT_ENTRIES);
+#endif
     for (auto &index : tatp_state.AHRT) {
         index.resize(ASSOCIATIVITY);
         for (auto &entry : index) {

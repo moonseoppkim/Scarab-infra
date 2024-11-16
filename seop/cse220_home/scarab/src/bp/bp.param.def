@@ -49,6 +49,10 @@
 
 */
 
+DEF_PARAM(  ahrt_index                , AHRT_INDEX                , uns     , uns        , 10         ,        )
+DEF_PARAM(  ahrt_tag                  , AHRT_TAG                  , int     , int        , 4          ,        )
+DEF_PARAM(  tatp_assoc                , TATP_ASSOC                , int     , int        , 4          ,        )
+DEF_PARAM(  htr_history_bits          , HRT_HISTORY_BITS          , uns     , uns        , 12         ,        )
 
 DEF_PARAM(  perfect_bp                , PERFECT_BP                , Flag    , Flag       , FALSE      ,        )
 DEF_PARAM(  perfect_btb               , PERFECT_BTB               , Flag    , Flag       , FALSE      ,        )

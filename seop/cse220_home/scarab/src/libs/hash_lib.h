@@ -29,6 +29,10 @@
 #ifndef __HASH_LIB_H__
 #define __HASH_LIB_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "globals/global_defs.h"
 
 
@@ -72,5 +76,9 @@ void   hash_table_rehash(Hash_Table*, int);
 
 void hash_table_access_replace(Hash_Table*, int64, void*);
 /**************************************************************************************/
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* #ifndef __HASH_LIB_H__ */

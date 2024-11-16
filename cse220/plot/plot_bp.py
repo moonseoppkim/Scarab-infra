@@ -39,7 +39,7 @@ def get_BP(descriptor_data, sim_path, output_dir):
                     with open(os.path.join(exp_path, config_key, 'bp.stat.0.csv')) as f:
                         lines = f.readlines()
                         for line in lines:
-                            if 'BP_ON_PATH_MISPREDICT_pct' in line:
+                            if 'BP_ON_PATH_CORRECT_pct' in line:
                                 tokens = [x.strip() for x in line.split(',')]
                                 BP = float(tokens[1])
                                 break
@@ -92,32 +92,34 @@ def get_unique_filename(directory, base_name):
 
 def bp_data(benchmarks, data, ylabel_name, fig_name, ylim=None):
     print(data)
-    # 확장된 색상 리스트로 최대 10개의 항목 지원
-    colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', 
+    colors = ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd',
               '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf']
+    line_styles = ['-', '--', '-.', ':', '-', '--', '-.', ':', '-', '--']
+    marker_styles = ['o', 's', '^', 'D', 'x', '*', 'p', 'h', 'v', '<']
 
     ind = np.arange(len(benchmarks))
-    num_configs = min(len(data.keys()), 10)  # 최대 10개의 항목까지 지원
-    width = 0.8 / num_configs  # 막대의 너비를 조정하여 10개의 항목이 잘 맞도록 함
+    num_configs = min(len(data.keys()), 10)
 
-    fig, ax = plt.subplots(figsize=(14, 4.4), dpi=80)
+    fig, ax = plt.subplots(figsize=(16, 6), dpi=80)
 
-    keys = list(data.keys())[:10]  # 최대 10개의 항목만 선택
+    keys = list(data.keys())[:10]
     for idx, key in enumerate(keys):
-        ax.bar(ind + (idx * width), data[key], width=width, color=colors[idx], edgecolor='black', label=key)
+        # Divide each data point by 100 to scale between 1 and 0.7
+        scaled_data = [value / 100 for value in data[key]]
+        ax.plot(ind, scaled_data, marker=marker_styles[idx], linestyle=line_styles[idx], 
+                color=colors[idx], label=key, alpha=0.8)
 
     ax.set_xlabel("Benchmarks")
-    ax.set_ylabel(ylabel_name)
-    ax.set_xticks(ind + width * (num_configs / 2))
+    ax.set_ylabel("Accuracy (%)")  # Update Y-axis label to "Accuracy (%)"
+    ax.set_xticks(ind)
     ax.set_xticklabels(benchmarks, rotation=27, ha='right')
     ax.grid(axis='x')
-    
-    # Y축을 0에서 25로 고정
-    ax.set_ylim(0, 30)
 
-    # Legend를 우측 상단 구석으로 이동
-    ax.legend(loc="upper right", bbox_to_anchor=(1, 1), fontsize=10)
+    # Set Y-axis limits from 0.7 to 1.0
+    ax.set_ylim(0.6, 1.0)
 
+    # Move legend to the lower right corner
+    ax.legend(loc="lower right", bbox_to_anchor=(1, 0), fontsize=10)
     fig.tight_layout()
     plt.savefig(fig_name, format="png", bbox_inches="tight")
 
